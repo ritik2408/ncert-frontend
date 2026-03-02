@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
-import { 
-  BookOpen, 
-  ChevronRight, 
-  GraduationCap, 
-  Lightbulb, 
-  Target, 
+import {
+  BookOpen,
+  ChevronRight,
+  GraduationCap,
+  Lightbulb,
+  Target,
   ArrowLeft,
   CheckCircle,
   FileText,
@@ -35,6 +35,7 @@ const subjectFAQs = [
 ];
 
 import RelatedSidebar from '../components/RelatedSidebar';
+import CollegeDuniaLogo from '../components/CollegeDuniaLogo';
 
 export default function SubjectHub() {
   const { classLevel, subjectSlug, resourceType } = useParams();
@@ -46,7 +47,7 @@ export default function SubjectHub() {
       setSelectedResourceType(resourceType);
     }
   }, [resourceType]);
-  
+
   // For demo purposes, we'll use the same chapters data for all subjects
   const formattedClass = classLevel?.replace('-', ' ').replace('class', 'Class');
   const formattedSubject = subjectSlug?.charAt(0).toUpperCase() + subjectSlug?.slice(1);
@@ -70,19 +71,16 @@ export default function SubjectHub() {
     <div className="min-h-screen bg-zinc-50">
       {/* Header */}
       <header className="bg-white border-b border-zinc-200 sticky top-0 z-50">
-        <div className="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
           <div className="flex items-center gap-4">
-            <button 
+            <button
               onClick={() => selectedResourceType ? setSelectedResourceType(null) : window.history.back()}
               className="p-2 hover:bg-zinc-100 rounded-full transition-colors"
             >
               <ArrowLeft className="w-5 h-5 text-zinc-600" />
             </button>
             <div className="flex items-center gap-2">
-              <div className="bg-emerald-600 p-1.5 rounded-lg">
-                <BookOpen className="text-white w-5 h-5" />
-              </div>
-              <span className="font-bold text-xl tracking-tight text-zinc-900">PhysicsHub</span>
+              <CollegeDuniaLogo />
             </div>
           </div>
           <div className="hidden sm:block text-sm font-medium text-zinc-500">
@@ -177,8 +175,8 @@ export default function SubjectHub() {
                   </section>
                 </div>
 
-                <RelatedSidebar 
-                  subjectSlug={subjectSlug} 
+                <RelatedSidebar
+                  subjectSlug={subjectSlug}
                   classLevel={classLevel}
                   resourceType={selectedResourceType || 'solutions'}
                 />
@@ -216,7 +214,7 @@ export default function SubjectHub() {
                       </h2>
                       <span className="text-zinc-400 text-sm font-medium">{chapters.length} Chapters Available</span>
                     </div>
-                    
+
                     <div className="grid gap-4">
                       {chapters.map((chapter, index) => (
                         <motion.div
@@ -225,7 +223,7 @@ export default function SubjectHub() {
                           animate={{ opacity: 1, x: 0 }}
                           transition={{ delay: index * 0.1 }}
                         >
-                          <Link 
+                          <Link
                             to={`/chapter/${chapter.id}`}
                             className="group block bg-white border border-zinc-200 p-6 rounded-2xl hover:border-emerald-500 hover:shadow-lg transition-all"
                           >
@@ -260,6 +258,49 @@ export default function SubjectHub() {
                         </p>
                       </div>
 
+                      {/* Physics Notes Intro - only for Class 12 Physics Notes */}
+                      {classLevel === 'class-12' && subjectSlug === 'physics' && selectedResourceType === 'notes' && (
+                        <div className="space-y-5 pb-2">
+                          <h2 className="text-2xl font-serif font-bold text-zinc-900">
+                            CBSE Class 12 Physics Notes: Chapter Wise Notes and Solutions
+                          </h2>
+                          <p className="text-zinc-600 leading-relaxed text-sm">
+                            CBSE Class 12 Physics notes, as per the latest CBSE Class 12 syllabus, are provided below. The notes consist of chapter-wise notes and NCERT Solutions to prepare for the CBSE Class 12 Board exam. Students can find links to NCERT Notes for all physics chapters of Class 12, organised by chapter number and title.
+                          </p>
+                          <ul className="space-y-2.5">
+                            {[
+                              'There are a total of 14 chapters in the CBSE Class 12 Physics syllabus.',
+                              'One chapter, Communication Systems (Chapter 15), has been removed from the CBSE Class 12 Physics syllabus and the NCERT textbook.',
+                              'These notes will be very useful during the preparation of the board exam.',
+                              'Class 12 Physics Notes will help in quick revision and provide an overview of the chapter.',
+                              'These notes cover all key concepts, theories, and formulas presented in a clear and simplified format.',
+                            ].map((point, i) => (
+                              <li key={i} className="flex items-start gap-3 text-sm text-zinc-600">
+                                <div className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2 shrink-0" />
+                                {point}
+                              </li>
+                            ))}
+                          </ul>
+                          {/* Highlight link from PDF */}
+                          <a
+                            href="https://www.cbse.gov.in/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-3 p-4 bg-amber-50 border border-amber-200 rounded-2xl hover:bg-amber-100 hover:border-amber-300 transition-all group"
+                          >
+                            <div className="w-8 h-8 bg-amber-500 rounded-lg flex items-center justify-center shrink-0">
+                              <FileText className="w-4 h-4 text-white" />
+                            </div>
+                            <div className="flex-1 min-w-0">
+                              <span className="text-sm font-semibold text-amber-800 group-hover:text-amber-900 leading-snug block">
+                                CBSE 12th Exam Analysis 2026: Check Expected Difficulty Level, Subject-wise Weightage, and Question Papers PDF
+                              </span>
+                            </div>
+                            <ChevronRight className="w-4 h-4 text-amber-500 shrink-0 group-hover:translate-x-1 transition-transform" />
+                          </a>
+                        </div>
+                      )}
+
                       {/* CBSE Weightage Section */}
                       {seoContent.weightage && (
                         <div className="space-y-6">
@@ -293,21 +334,89 @@ export default function SubjectHub() {
                         <div className="space-y-8">
                           <div className="flex items-center gap-3 text-zinc-900 font-bold text-xl">
                             <BookOpen className="w-6 h-6 text-emerald-600" />
-                            Detailed Chapter Insights
+                            Chapter-Wise Notes and Topics
                           </div>
                           <div className="grid gap-6">
                             {seoContent.chapterDetails.map((detail, i) => (
-                              <div key={i} className="p-6 bg-zinc-50 rounded-3xl border border-zinc-100 space-y-4">
+                              <div key={i} className="p-6 bg-zinc-50 rounded-3xl border border-zinc-100 space-y-4 hover:border-zinc-200 hover:bg-white transition-all">
                                 <h4 className="text-lg font-bold text-zinc-900">{detail.title}</h4>
                                 <p className="text-sm text-zinc-600 leading-relaxed">{detail.description}</p>
-                                <div className="flex flex-wrap gap-2">
-                                  {detail.topics.map((topic, j) => (
-                                    <span key={j} className="px-3 py-1 bg-white border border-zinc-200 rounded-full text-[10px] font-bold text-zinc-500 uppercase tracking-wider">
-                                      {topic}
-                                    </span>
-                                  ))}
+                                <div className="space-y-2">
+                                  <p className="text-xs text-zinc-400 font-semibold uppercase tracking-widest">Important NCERT Notes from this chapter</p>
+                                  <div className="flex flex-wrap gap-2">
+                                    {detail.topicLinks ? (
+                                      detail.topicLinks.map((tl, j) => (
+                                        <Link
+                                          key={j}
+                                          to={tl.href}
+                                          className="px-3 py-1 bg-blue-50 border border-blue-100 rounded-full text-[11px] font-semibold text-blue-600 hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all"
+                                        >
+                                          {tl.name}
+                                        </Link>
+                                      ))
+                                    ) : (
+                                      detail.topics.map((topic, j) => (
+                                        <span key={j} className="px-3 py-1 bg-white border border-zinc-200 rounded-full text-[10px] font-bold text-zinc-500 uppercase tracking-wider">
+                                          {topic}
+                                        </span>
+                                      ))
+                                    )}
+                                  </div>
                                 </div>
+                                {detail.solutionLink && (
+                                  <div className="pt-1 flex justify-end">
+                                    <Link
+                                      to={detail.solutionLink}
+                                      className="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-600 hover:text-emerald-700 transition-colors group"
+                                    >
+                                      View Notes &amp; Solutions
+                                      <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+                                    </Link>
+                                  </div>
+                                )}
                               </div>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+
+                      {/* Chapter-Wise NCERT Solution Links - only for Class 12 Physics Notes */}
+                      {classLevel === 'class-12' && subjectSlug === 'physics' && selectedResourceType === 'notes' && (
+                        <div className="space-y-6">
+                          <div className="flex items-center gap-3 text-zinc-900 font-bold text-xl">
+                            <CheckCircle className="w-6 h-6 text-emerald-600" />
+                            Chapter-Wise NCERT Solutions
+                          </div>
+                          <div className="grid md:grid-cols-2 gap-3">
+                            {[
+                              { num: 1, title: 'Electric Charges and Fields', path: '/chapter/1' },
+                              { num: 2, title: 'Electrostatic Potential and Capacitance', path: '/chapter/2' },
+                              { num: 3, title: 'Current Electricity', path: '/chapter/3' },
+                              { num: 4, title: 'Moving Charges and Magnetism', path: '/chapter/4' },
+                              { num: 5, title: 'Magnetism and Matter', path: '/chapter/5' },
+                              { num: 6, title: 'Electromagnetic Induction', path: '/chapter/6' },
+                              { num: 7, title: 'Alternating Current', path: '/chapter/7' },
+                              { num: 8, title: 'Electromagnetic Waves', path: '/chapter/8' },
+                              { num: 9, title: 'Ray Optics and Optical Instruments', path: '/chapter/9' },
+                              { num: 10, title: 'Wave Optics', path: '/chapter/10' },
+                              { num: 11, title: 'Dual Nature of Radiation and Matter', path: '/chapter/11' },
+                              { num: 12, title: 'Atoms', path: '/chapter/12' },
+                              { num: 13, title: 'Nuclei', path: '/chapter/13' },
+                              { num: 14, title: 'Semiconductor Electronics', path: '/chapter/14' },
+                            ].map((ch) => (
+                              <Link
+                                key={ch.num}
+                                to={ch.path}
+                                className="flex items-center gap-3 px-4 py-3 bg-zinc-50 border border-zinc-100 rounded-2xl hover:bg-emerald-50 hover:border-emerald-300 transition-all group"
+                              >
+                                <div className="w-7 h-7 bg-emerald-600 rounded-lg flex items-center justify-center text-white text-xs font-bold shrink-0 group-hover:scale-110 transition-transform shadow-sm">
+                                  {ch.num}
+                                </div>
+                                <span className="text-sm text-zinc-700 font-medium group-hover:text-emerald-700 flex-1 leading-snug">
+                                  NCERT Solutions for Class 12 Physics Chapter {ch.num} — {ch.title}
+                                </span>
+                                <ChevronRight className="w-4 h-4 text-zinc-300 group-hover:text-emerald-500 group-hover:translate-x-0.5 transition-all shrink-0" />
+                              </Link>
                             ))}
                           </div>
                         </div>
@@ -362,8 +471,8 @@ export default function SubjectHub() {
                   </section>
                 </div>
 
-                <RelatedSidebar 
-                  subjectSlug={subjectSlug} 
+                <RelatedSidebar
+                  subjectSlug={subjectSlug}
                   classLevel={classLevel}
                   resourceType={selectedResourceType || 'solutions'}
                 />

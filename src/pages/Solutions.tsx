@@ -42,6 +42,7 @@ const solutionsFAQs = [
 ];
 
 import RelatedSidebar from '../components/RelatedSidebar';
+import CollegeDuniaLogo from '../components/CollegeDuniaLogo';
 
 export default function Solutions() {
   const [selectedClass, setSelectedClass] = useState(navigationData[0].level);
@@ -63,10 +64,7 @@ export default function Solutions() {
               <ArrowLeft className="w-5 h-5 text-zinc-600" />
             </Link>
             <div className="flex items-center gap-2">
-              <div className="bg-emerald-600 p-1.5 rounded-lg">
-                <BookOpen className="text-white w-5 h-5" />
-              </div>
-              <span className="font-bold text-xl tracking-tight text-zinc-900">PhysicsHub</span>
+              <CollegeDuniaLogo />
             </div>
           </div>
           <div className="hidden sm:block text-sm font-medium text-zinc-500">
@@ -200,7 +198,7 @@ export default function Solutions() {
       {/* Footer */}
       <footer className="bg-white border-t border-zinc-200 py-12 mt-20">
         <div className="max-w-7xl mx-auto px-4 text-center text-xs text-zinc-400">
-          © 2026 PhysicsHub. All rights reserved.
+          © 2026 Collegedunia. All rights reserved.
         </div>
       </footer>
     </div>

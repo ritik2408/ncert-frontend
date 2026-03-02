@@ -26,11 +26,12 @@ const iconMap: Record<string, any> = {
 };
 
 import FAQ from '../components/FAQ';
+import CollegeDuniaLogo from '../components/CollegeDuniaLogo';
 
 const landingFAQs = [
   {
-    question: "What is PhysicsHub?",
-    answer: "PhysicsHub is a comprehensive educational platform providing NCERT solutions, notes, books, and exemplar problems for students from Class 10 to 12."
+    question: "What is Collegedunia?",
+    answer: "Collegedunia is a comprehensive educational platform providing NCERT solutions, notes, books, and exemplar problems for students from Class 10 to 12."
   },
   {
     question: "Are the solutions updated for the current session?",
@@ -61,10 +62,7 @@ export default function Landing() {
       <header className="bg-white border-b border-zinc-200 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="bg-emerald-600 p-1.5 rounded-lg">
-              <BookOpen className="text-white w-5 h-5" />
-            </div>
-            <span className="font-bold text-xl tracking-tight text-zinc-900">PhysicsHub</span>
+            <CollegeDuniaLogo />
           </div>
           <div className="hidden md:flex items-center gap-6">
             <nav className="flex items-center gap-4 text-sm font-medium text-zinc-600">
@@ -298,10 +296,7 @@ export default function Landing() {
         <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-12">
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <div className="bg-emerald-600 p-1.5 rounded-lg">
-                <BookOpen className="text-white w-5 h-5" />
-              </div>
-              <span className="font-bold text-xl tracking-tight text-zinc-900">PhysicsHub</span>
+              <CollegeDuniaLogo />
             </div>
             <p className="text-zinc-500 text-sm leading-relaxed">
               Empowering students with high-quality NCERT resources and interactive learning tools.
@@ -335,7 +330,7 @@ export default function Landing() {
           </div>
         </div>
         <div className="max-w-7xl mx-auto px-4 pt-12 mt-12 border-t border-zinc-100 text-center text-xs text-zinc-400">
-          © 2026 PhysicsHub. All rights reserved. NCERT content is property of NCERT.
+          © 2026 Collegedunia. All rights reserved. NCERT content is property of NCERT.
         </div>
       </footer>
     </div>
