@@ -17,6 +17,8 @@ export interface Chapter {
   shortTitle: string;
   description: string;
   pdfUrl: string;
+  formulaSheetUrl?: string;
+  keyFormulas?: string[];
   studyGuide: StudyGuideItem[];
   solutions: QuestionSolution[];
 }
@@ -28,6 +30,8 @@ export const chapters: Chapter[] = [
     shortTitle: "Electric Charges & Fields",
     description: "Introduces the fundamental concepts of electric charge, Coulomb's law, electric field lines, and Gauss's law with applications.",
     pdfUrl: "https://ncert.nic.in/textbook/pdf/leph101.pdf",
+    formulaSheetUrl: "https://www.collegedunia.com/school-education/cbse-class-12-physics-formulas",
+    keyFormulas: ["F = kq₁q₂/r² (Coulomb's Law)", "E = F/q₀ (Electric Field)", "Φ = q_enc/ε₀ (Gauss's Law)", "p = q·d (Dipole Moment)"],
     studyGuide: [
       {
         topic: "Electric Charge",
@@ -517,6 +521,8 @@ $\\boxed{E_c \\approx 1.92 \\times 10^{-10} \\text{ N/C}}`
     shortTitle: "Potential & Capacitance",
     description: "Explores electric potential, equipotential surfaces, potential energy of charge systems, dielectrics, and capacitors.",
     pdfUrl: "https://ncert.nic.in/textbook/pdf/leph102.pdf",
+    formulaSheetUrl: "https://www.collegedunia.com/school-education/cbse-class-12-physics-formulas",
+    keyFormulas: ["V = kq/r (Potential due to point charge)", "C = Q/V (Capacitance)", "C_series: 1/C = 1/C₁ + 1/C₂", "U = ½CV² (Energy stored)"],
     studyGuide: [
       {
         topic: "Electric Potential",
@@ -549,6 +555,8 @@ $\\boxed{E_c \\approx 1.92 \\times 10^{-10} \\text{ N/C}}`
     shortTitle: "Current Electricity",
     description: "Covers electric current, Ohm's law, resistivity, EMF, Kirchhoff's rules, Wheatstone bridge, and potentiometer.",
     pdfUrl: "https://ncert.nic.in/textbook/pdf/leph103.pdf",
+    formulaSheetUrl: "https://www.collegedunia.com/school-education/cbse-class-12-physics-formulas",
+    keyFormulas: ["V = IR (Ohm's Law)", "R = ρl/A (Resistance)", "P = VI = I²R (Power)", "EMF: ε = V + Ir (terminal voltage)"],
     studyGuide: [
       {
         topic: "Ohm's Law",
@@ -581,6 +589,8 @@ $\\boxed{E_c \\approx 1.92 \\times 10^{-10} \\text{ N/C}}`
     shortTitle: "Moving Charges & Magnetism",
     description: "Studies the magnetic effect of electric current, Biot-Savart law, Ampere's circuital law, and motion of charges in magnetic fields.",
     pdfUrl: "https://ncert.nic.in/textbook/pdf/leph104.pdf",
+    formulaSheetUrl: "https://www.collegedunia.com/school-education/cbse-class-12-physics-formulas",
+    keyFormulas: ["F = qv×B (Lorentz Force)", "B = μ₀I/2πr (Ampere's Law - wire)", "F = BIl (Force on conductor)", "τ = nIAB (Torque on loop)"],
     studyGuide: [
       {
         topic: "Magnetic Force on a Charge",
@@ -613,6 +623,8 @@ $\\boxed{E_c \\approx 1.92 \\times 10^{-10} \\text{ N/C}}`
     shortTitle: "Magnetism & Matter",
     description: "Covers bar magnets, Earth's magnetism, magnetic properties of materials — diamagnetic, paramagnetic, and ferromagnetic substances.",
     pdfUrl: "https://ncert.nic.in/textbook/pdf/leph105.pdf",
+    formulaSheetUrl: "https://www.collegedunia.com/school-education/cbse-class-12-physics-formulas",
+    keyFormulas: ["B = μ₀M/4πr³ (Axial field of bar magnet)", "m = pole strength × l (Magnetic moment)", "χ = I/H (Susceptibility)", "μᵣ = 1 + χ (Relative permeability)"],
     studyGuide: [
       {
         topic: "Bar Magnet",
@@ -641,6 +653,8 @@ $\\boxed{E_c \\approx 1.92 \\times 10^{-10} \\text{ N/C}}`
     shortTitle: "Electromagnetic Induction",
     description: "Explores Faraday's laws, Lenz's law, motional EMF, eddy currents, self-inductance, mutual inductance, and AC generators.",
     pdfUrl: "https://ncert.nic.in/textbook/pdf/leph106.pdf",
+    formulaSheetUrl: "https://www.collegedunia.com/school-education/cbse-class-12-physics-formulas",
+    keyFormulas: ["ε = -dΦ/dt (Faraday's Law)", "L = NΦ/I (Self-inductance)", "M = μ₀N₁N₂A/l (Mutual inductance)", "E_induced = Blv (Motional EMF)"],
     studyGuide: [
       {
         topic: "Faraday's Law",
@@ -673,6 +687,8 @@ $\\boxed{E_c \\approx 1.92 \\times 10^{-10} \\text{ N/C}}`
     shortTitle: "Alternating Current",
     description: "Covers AC voltage, phase relations in R, L, C circuits, resonance, power factor, LC oscillations, and transformers.",
     pdfUrl: "https://ncert.nic.in/textbook/pdf/leph107.pdf",
+    formulaSheetUrl: "https://www.collegedunia.com/school-education/cbse-class-12-physics-formulas",
+    keyFormulas: ["X_L = ωL (Inductive reactance)", "X_C = 1/ωC (Capacitive reactance)", "Z = √(R² + (X_L−X_C)²) (Impedance)", "f_r = 1/2π√LC (Resonant frequency)"],
     studyGuide: [
       {
         topic: "AC Circuit Basics",
@@ -705,6 +721,8 @@ $\\boxed{E_c \\approx 1.92 \\times 10^{-10} \\text{ N/C}}`
     shortTitle: "Electromagnetic Waves",
     description: "Studies Maxwell's equations, displacement current, properties of EM waves, and the electromagnetic spectrum from radio to gamma rays.",
     pdfUrl: "https://ncert.nic.in/textbook/pdf/leph108.pdf",
+    formulaSheetUrl: "https://www.collegedunia.com/school-education/cbse-class-12-physics-formulas",
+    keyFormulas: ["c = 1/√μ₀ε₀ = 3×10⁸ m/s", "c = νλ (Speed = frequency × wavelength)", "I = ½ε₀cE₀² (Intensity)", "J_D = ε₀(dE/dt) (Displacement current)"],
     studyGuide: [
       {
         topic: "Displacement Current",
@@ -733,6 +751,8 @@ $\\boxed{E_c \\approx 1.92 \\times 10^{-10} \\text{ N/C}}`
     shortTitle: "Ray Optics",
     description: "Covers reflection, refraction, total internal reflection, lenses, mirrors, prisms, and optical instruments like microscopes and telescopes.",
     pdfUrl: "https://ncert.nic.in/textbook/pdf/leph109.pdf",
+    formulaSheetUrl: "https://www.collegedunia.com/school-education/cbse-class-12-physics-formulas",
+    keyFormulas: ["1/f = 1/v − 1/u (Mirror formula)", "1/f = 1/v − 1/u (Lens formula)", "n₁sinθ₁ = n₂sinθ₂ (Snell's Law)", "P = 1/f (Dioptre; f in metres)"],
     studyGuide: [
       {
         topic: "Reflection & Mirrors",
@@ -765,6 +785,8 @@ $\\boxed{E_c \\approx 1.92 \\times 10^{-10} \\text{ N/C}}`
     shortTitle: "Wave Optics",
     description: "Introduces Huygens' principle, interference of light, Young's double slit experiment, diffraction, and polarisation.",
     pdfUrl: "https://ncert.nic.in/textbook/pdf/leph110.pdf",
+    formulaSheetUrl: "https://www.collegedunia.com/school-education/cbse-class-12-physics-formulas",
+    keyFormulas: ["β = λD/d (YDSE fringe width)", "path difference = d·sinθ", "For constructive: Δ = nλ", "For destructive: Δ = (n+½)λ"],
     studyGuide: [
       {
         topic: "Huygens' Principle",
@@ -797,6 +819,8 @@ $\\boxed{E_c \\approx 1.92 \\times 10^{-10} \\text{ N/C}}`
     shortTitle: "Dual Nature",
     description: "Covers photoelectric effect, Einstein's equation, wave-particle duality, de Broglie hypothesis, and Davisson-Germer experiment.",
     pdfUrl: "https://ncert.nic.in/textbook/pdf/leph111.pdf",
+    formulaSheetUrl: "https://www.collegedunia.com/school-education/cbse-class-12-physics-formulas",
+    keyFormulas: ["E = hν (Photon energy)", "KE_max = hν − φ (Photoelectric eq.)", "λ = h/mv (de Broglie wavelength)", "p = h/λ = hν/c (Photon momentum)"],
     studyGuide: [
       {
         topic: "Photoelectric Effect",
@@ -825,6 +849,8 @@ $\\boxed{E_c \\approx 1.92 \\times 10^{-10} \\text{ N/C}}`
     shortTitle: "Atoms",
     description: "Covers Rutherford's nuclear model, Bohr's atomic model, energy levels, spectral series of hydrogen, and atomic spectra.",
     pdfUrl: "https://ncert.nic.in/textbook/pdf/leph112.pdf",
+    formulaSheetUrl: "https://www.collegedunia.com/school-education/cbse-class-12-physics-formulas",
+    keyFormulas: ["r_n = n²a₀ (Bohr radius, a₀ = 0.529 Å)", "E_n = −13.6/n² eV (Energy levels)", "1/λ = R(1/n₁² − 1/n₂²) (Rydberg)", "L = nh/2π (Angular momentum)"],
     studyGuide: [
       {
         topic: "Rutherford's Model",
@@ -853,6 +879,8 @@ $\\boxed{E_c \\approx 1.92 \\times 10^{-10} \\text{ N/C}}`
     shortTitle: "Nuclei",
     description: "Studies nuclear composition, size, mass defect, binding energy, radioactivity, nuclear fission and fusion, and nuclear energy.",
     pdfUrl: "https://ncert.nic.in/textbook/pdf/leph113.pdf",
+    formulaSheetUrl: "https://www.collegedunia.com/school-education/cbse-class-12-physics-formulas",
+    keyFormulas: ["N = N₀e^(−λt) (Radioactive decay)", "T₁/₂ = 0.693/λ (Half-life)", "BE = [Zm_p + Nm_n − M]c² (Binding energy)", "Q = (M_i − M_f)c² (Q-value)"],
     studyGuide: [
       {
         topic: "Nuclear Size and Binding Energy",
@@ -881,6 +909,8 @@ $\\boxed{E_c \\approx 1.92 \\times 10^{-10} \\text{ N/C}}`
     shortTitle: "Semiconductor Electronics",
     description: "Covers energy bands, intrinsic and extrinsic semiconductors, p-n junction diode, rectifiers, transistors, and logic gates.",
     pdfUrl: "https://ncert.nic.in/textbook/pdf/leph114.pdf",
+    formulaSheetUrl: "https://www.collegedunia.com/school-education/cbse-class-12-physics-formulas",
+    keyFormulas: ["I_E = I_B + I_C (KCL for transistor)", "β = I_C/I_B (Current gain)", "V_T = V_out/V_in (Voltage gain)", "Logic: NAND = NOT(A·B)"],
     studyGuide: [
       {
         topic: "Energy Bands",

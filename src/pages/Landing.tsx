@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
-import { 
-  BookOpen, 
-  ChevronRight, 
-  GraduationCap, 
-  Search, 
-  Zap, 
-  FlaskConical, 
-  Calculator, 
-  Dna, 
-  Beaker, 
+import {
+  BookOpen,
+  ChevronRight,
+  GraduationCap,
+  Search,
+  Zap,
+  FlaskConical,
+  Calculator,
+  Dna,
+  Beaker,
   Globe,
   CheckCircle,
   FileText,
@@ -52,7 +52,7 @@ export default function Landing() {
   const [showAll, setShowAll] = useState(false);
 
   const activeClassData = navigationData.find(c => c.level === selectedClass) || navigationData[0];
-  
+
   // Initial subjects to show (8 subjects = 2 rows of 4)
   const displayedSubjects = showAll ? activeClassData.subjects : activeClassData.subjects.slice(0, 8);
 
@@ -68,6 +68,8 @@ export default function Landing() {
             <nav className="flex items-center gap-4 text-sm font-medium text-zinc-600">
               <Link to="/solutions" className="hover:text-emerald-600 transition-colors">Solutions</Link>
               <Link to="/notes" className="hover:text-emerald-600 transition-colors">Notes</Link>
+              <Link to="/books" className="hover:text-emerald-600 transition-colors">Books</Link>
+              <Link to="/formulas" className="hover:text-emerald-600 transition-colors">Formulas</Link>
               <Link to="/exemplar" className="hover:text-emerald-600 transition-colors">Exemplar</Link>
             </nav>
             <div className="h-4 w-px bg-zinc-200" />
@@ -100,26 +102,28 @@ export default function Landing() {
               From detailed solutions to interactive book previews, we provide everything you need to excel in your academics.
             </p>
           </div>
-          
+
           {/* Bigger Resource Tiles */}
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4 max-w-5xl mx-auto">
             {resourceTypes.map((type, index) => {
               const Icon = iconMap[type.icon];
-              
+
               // Map slugs to routes
               const routeMap: Record<string, string> = {
                 'solutions': '/solutions',
                 'notes': '/notes',
-                'exemplar': '/exemplar'
+                'exemplar': '/exemplar',
+                'books': '/books',
+                'formulas': '/formulas',
               };
-              
+
               const targetRoute = routeMap[type.slug];
-              
-              const TileWrapper = ({ children }: { children: React.ReactNode }) => 
+
+              const TileWrapper = ({ children }: { children: React.ReactNode }) =>
                 targetRoute ? <Link to={targetRoute}>{children}</Link> : <div>{children}</div>;
 
               return (
-                <motion.div 
+                <motion.div
                   key={type.slug}
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -139,7 +143,7 @@ export default function Landing() {
             })}
           </div>
         </div>
-        
+
         {/* Background Decoration */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full pointer-events-none overflow-hidden">
           <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-emerald-50 rounded-full blur-[120px] opacity-50" />
@@ -152,7 +156,7 @@ export default function Landing() {
         <section className="space-y-12">
           <div className="text-center space-y-4">
             <h2 className="text-3xl font-bold text-zinc-900">Explore by Class</h2>
-            
+
             {/* Class Filter Tiles */}
             <div className="flex justify-center gap-3">
               {navigationData.map((classLevel) => (
@@ -162,18 +166,17 @@ export default function Landing() {
                     setSelectedClass(classLevel.level);
                     setShowAll(false);
                   }}
-                  className={`px-6 py-2.5 rounded-full text-sm font-bold transition-all ${
-                    selectedClass === classLevel.level 
-                    ? "bg-emerald-600 text-white shadow-lg shadow-emerald-200 scale-105" 
-                    : "bg-white border border-zinc-200 text-zinc-500 hover:border-zinc-300"
-                  }`}
+                  className={`px-6 py-2.5 rounded-full text-sm font-bold transition-all ${selectedClass === classLevel.level
+                      ? "bg-emerald-600 text-white shadow-lg shadow-emerald-200 scale-105"
+                      : "bg-white border border-zinc-200 text-zinc-500 hover:border-zinc-300"
+                    }`}
                 >
                   {classLevel.level}
                 </button>
               ))}
             </div>
           </div>
-          
+
           {/* Dynamic Subject Grid */}
           <div className="relative min-h-[300px] space-y-10">
             <AnimatePresence mode="wait">
@@ -206,7 +209,7 @@ export default function Landing() {
                           <ArrowRight className="w-4 h-4" />
                         </div>
                       </div>
-                      
+
                       {/* Colorful Background Accent */}
                       <div className={`absolute -right-8 -bottom-8 w-32 h-32 ${subject.lightColor} rounded-full opacity-50 group-hover:scale-150 transition-transform`} />
                     </Link>
@@ -283,7 +286,7 @@ export default function Landing() {
               </div>
             </div>
           </div>
-          
+
           {/* Background Glow */}
           <div className="absolute top-0 right-0 w-1/2 h-full bg-emerald-500/5 blur-[120px] pointer-events-none" />
         </section>
@@ -305,19 +308,19 @@ export default function Landing() {
           <div>
             <h5 className="font-bold text-zinc-900 mb-4">Resources</h5>
             <ul className="space-y-2 text-sm text-zinc-500">
-              <li><a href="#" className="hover:text-emerald-600 transition-colors">NCERT Solutions</a></li>
-              <li><a href="#" className="hover:text-emerald-600 transition-colors">NCERT Books</a></li>
-              <li><a href="#" className="hover:text-emerald-600 transition-colors">Exemplar Solutions</a></li>
-              <li><a href="#" className="hover:text-emerald-600 transition-colors">Revision Notes</a></li>
+              <li><Link to="/solutions" className="hover:text-emerald-600 transition-colors">NCERT Solutions</Link></li>
+              <li><Link to="/books" className="hover:text-emerald-600 transition-colors">NCERT Books</Link></li>
+              <li><Link to="/exemplar" className="hover:text-emerald-600 transition-colors">Exemplar Solutions</Link></li>
+              <li><Link to="/notes" className="hover:text-emerald-600 transition-colors">Revision Notes</Link></li>
             </ul>
           </div>
           <div>
             <h5 className="font-bold text-zinc-900 mb-4">Quick Links</h5>
             <ul className="space-y-2 text-sm text-zinc-500">
-              <li><a href="#" className="hover:text-emerald-600 transition-colors">Class 12 Physics</a></li>
-              <li><a href="#" className="hover:text-emerald-600 transition-colors">Class 11 Chemistry</a></li>
-              <li><a href="#" className="hover:text-emerald-600 transition-colors">Class 10 Science</a></li>
-              <li><a href="#" className="hover:text-emerald-600 transition-colors">Formula Sheets</a></li>
+              <li><Link to="/class-12/physics" className="hover:text-emerald-600 transition-colors">Class 12 Physics</Link></li>
+              <li><Link to="/class-11/chemistry" className="hover:text-emerald-600 transition-colors">Class 11 Chemistry</Link></li>
+              <li><Link to="/class-10/science" className="hover:text-emerald-600 transition-colors">Class 10 Science</Link></li>
+              <li><Link to="/formulas" className="hover:text-emerald-600 transition-colors">Formula Sheets</Link></li>
             </ul>
           </div>
           <div>

@@ -11,6 +11,8 @@ import ChapterDetail from './pages/ChapterDetail';
 import Solutions from './pages/Solutions';
 import Notes from './pages/Notes';
 import Exemplar from './pages/Exemplar';
+import Books from './pages/Books';
+import FormulaSheets from './pages/FormulaSheets';
 
 export default function App() {
   return (
@@ -20,6 +22,8 @@ export default function App() {
         <Route path="/solutions" element={<Solutions />} />
         <Route path="/notes" element={<Notes />} />
         <Route path="/exemplar" element={<Exemplar />} />
+        <Route path="/books" element={<Books />} />
+        <Route path="/formulas" element={<FormulaSheets />} />
         <Route path="/:classLevel/:subjectSlug/:resourceType?" element={<SubjectHub />} />
         <Route path="/chapter/:id" element={<ChapterDetail />} />
       </Routes>
