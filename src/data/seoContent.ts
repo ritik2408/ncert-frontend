@@ -23,7 +23,7 @@ export interface SEOContent {
 export const subjectSEOData: Record<string, Record<string, SEOContent>> = {
   "class-12": {
     "physics": {
-      overview: "Class 12 Physics is a pivotal subject for students aiming for careers in engineering and pure sciences. It bridges the gap between basic concepts and advanced physical theories. The curriculum is divided into two parts, covering everything from Electrostatics to modern Physics like Atoms and Nuclei.",
+      overview: "Class 12 Physics is a important subject for students aiming for careers in engineering and pure sciences. It bridges the gap between basic concepts and advanced physical theories. The curriculum is divided into two parts, covering everything from Electrostatics to modern Physics like Atoms and Nuclei.",
       weightage: [
         { unit: "Electrostatics & Current Electricity", marks: 16 },
         { unit: "Magnetic Effects of Current & Magnetism", marks: 17 },
