@@ -11,14 +11,23 @@ export interface QuestionSolution {
   figureCaption?: string; // caption shown below the image
 }
 
+export interface BookPart {
+  label: string;  // e.g. "Part 1" or "Chapter PDF"
+  url: string;
+}
+
 export interface Chapter {
   id: number;
   title: string;
   shortTitle: string;
   description: string;
-  pdfUrl: string;
+  pdfUrl: string;                // Solutions / main PDF
+  notesUrl?: string;             // Chapter notes PDF / page
+  exemplarUrl?: string;          // Exemplar PDF (English)
+  exemplarHindiUrl?: string;     // Exemplar PDF (Hindi)
   formulaSheetUrl?: string;
   keyFormulas?: string[];
+  bookParts?: BookPart[];        // Named parts for book PDF viewer
   studyGuide: StudyGuideItem[];
   solutions: QuestionSolution[];
 }
@@ -30,8 +39,15 @@ export const chapters: Chapter[] = [
     shortTitle: "Electric Charges & Fields",
     description: "Introduces the fundamental concepts of electric charge, Coulomb's law, electric field lines, and Gauss's law with applications.",
     pdfUrl: "https://ncert.nic.in/textbook/pdf/leph101.pdf",
+    notesUrl: "https://ncert.nic.in/textbook/pdf/leph101.pdf",
+    exemplarUrl: "https://ncert.nic.in/textbook/pdf/keep101.pdf",
+    exemplarHindiUrl: "https://ncert.nic.in/textbook/pdf/khep101.pdf",
     formulaSheetUrl: "https://www.collegedunia.com/school-education/cbse-class-12-physics-formulas",
     keyFormulas: ["F = kq₁q₂/r² (Coulomb's Law)", "E = F/q₀ (Electric Field)", "Φ = q_enc/ε₀ (Gauss's Law)", "p = q·d (Dipole Moment)"],
+    bookParts: [
+      { label: "Chapter 1 PDF", url: "https://ncert.nic.in/textbook/pdf/leph101.pdf" },
+      { label: "Part 1 Full Book", url: "https://ncert.nic.in/textbook/pdf/leph1dd.pdf" },
+    ],
     studyGuide: [
       {
         topic: "Electric Charge",

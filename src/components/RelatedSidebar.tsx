@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  BookOpen, 
-  FileText, 
-  Star, 
-  ChevronRight, 
+import {
+  BookOpen,
+  FileText,
+  Star,
+  ChevronRight,
   Hash,
   CheckCircle,
   ExternalLink,
@@ -21,13 +21,13 @@ interface RelatedSidebarProps {
   resourceType?: string; // 'solutions', 'notes', 'books', 'exemplar', 'formulas'
 }
 
-export default function RelatedSidebar({ 
-  currentChapterId, 
-  subjectSlug = 'physics', 
+export default function RelatedSidebar({
+  currentChapterId,
+  subjectSlug = 'physics',
   classLevel = 'class-12',
   resourceType = 'solutions'
 }: RelatedSidebarProps) {
-  
+
   const formattedClass = classLevel.replace('-', ' ').replace('class', 'Class');
   const currentChapter = chapters.find(c => c.id === currentChapterId);
 
@@ -62,7 +62,7 @@ export default function RelatedSidebar({
             {resourceTypes.map((type) => (
               <Link
                 key={type.slug}
-                to={`/chapter/${currentChapterId}?type=${type.slug}`}
+                to={`/chapter/${currentChapterId}/${type.slug}`}
                 className={`flex items-center justify-between p-3 rounded-xl border border-transparent hover:border-zinc-200 hover:bg-zinc-50 transition-all group ${resourceType === type.slug ? 'bg-zinc-50 border-zinc-200' : ''}`}
               >
                 <div className="flex items-center gap-3">
@@ -89,7 +89,7 @@ export default function RelatedSidebar({
             {otherChapters.map((chapter) => (
               <Link
                 key={chapter.id}
-                to={`/chapter/${chapter.id}?type=${resourceType}`}
+                to={`/chapter/${chapter.id}/${resourceType}`}
                 className="group block space-y-1"
               >
                 <h4 className="text-sm font-bold text-zinc-800 group-hover:text-emerald-600 transition-colors line-clamp-1">
@@ -100,7 +100,7 @@ export default function RelatedSidebar({
                 </p>
               </Link>
             ))}
-            <Link 
+            <Link
               to={`/${classLevel}/${subjectSlug}/${resourceType}`}
               className="block text-center py-2 text-xs font-bold text-emerald-600 hover:text-emerald-700 transition-colors border-t border-zinc-100 pt-4 mt-2"
             >

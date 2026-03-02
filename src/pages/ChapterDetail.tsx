@@ -631,6 +631,195 @@ export default function ChapterDetail() {
                 ))}
               </div>
             </section>
+
+            {/* Chapter 1 specific supplementary content */}
+            {chapter.id === 1 && (
+              <div className="space-y-8">
+
+                {/* Intro */}
+                <section className="bg-white rounded-[2rem] border border-zinc-200 p-8 space-y-5">
+                  <p className="text-zinc-700 leading-relaxed text-sm">
+                    Class 12 Physics Chapter 1 Electric Charges and Fields will teach you the basic principles of electrostatics. Electric charge is the basic property of matter that causes it to experience a force when it is kept in an electric or a magnetic field. The chapter is included in the unit Electrostatics, which, together with Current Electricity, has a weightage of <strong>17 marks</strong> in the CBSE Class 12 Physics Exam.
+                  </p>
+                  <ul className="space-y-2">
+                    {[
+                      <span key={0}>This Class 12 Physics Chapter 1 explains <strong>electric charges, Coulomb's law, electric field, electric field lines, and Gauss's law.</strong></span>,
+                      'Many students find derivations and numerical problems difficult in this chapter.',
+                      'The NCERT solution provides step-by-step explanations to help you understand every concept with confidence.',
+                    ].map((item, i) => (
+                      <li key={i} className="flex items-start gap-3 text-sm text-zinc-600">
+                        <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 shrink-0" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="flex flex-wrap gap-3">
+                    <a href="https://assets.collegedunia.com/public/image/33c21da95fcd4c7d546c6a367c8434cf.pdf" target="_blank" rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-5 py-2.5 bg-emerald-600 text-white text-sm font-bold rounded-2xl hover:bg-emerald-700 transition-colors">
+                      <Download className="w-4 h-4" />
+                      Download Physics Chapter 1 NCERT Solution
+                    </a>
+                  </div>
+                  <div className="flex flex-wrap gap-3 pt-1">
+                    <a href="https://collegedunia.com/exams/cbse-class-xii/physics-question-paper" target="_blank" rel="noopener noreferrer"
+                      className="text-xs font-semibold text-amber-700 bg-amber-50 border border-amber-200 rounded-full px-4 py-1.5 hover:bg-amber-100 transition-colors">
+                      Also Check: CBSE Class 12 Physics Question Paper with Solution (2026–2015): Download PDF →
+                    </a>
+                  </div>
+                </section>
+
+                {/* NCERT Solutions heading */}
+                <section className="bg-white rounded-[2rem] border border-zinc-200 p-8 space-y-3">
+                  <h2 className="text-xl font-bold text-zinc-900 flex items-center gap-2">
+                    <BookOpen className="w-5 h-5 text-emerald-600" />
+                    NCERT Solutions for Class 12 Physics Chapter 1
+                  </h2>
+                  <p className="text-sm text-zinc-600">The NCERT Solutions for class 12 physics chapter 1 Electric Charges and Fields are as given above in the Exercise Solutions section.</p>
+                </section>
+
+                {/* Related Articles */}
+                <section className="bg-white rounded-[2rem] border border-zinc-200 overflow-hidden">
+                  <div className="p-8 pb-4">
+                    <h2 className="text-xl font-bold text-zinc-900 flex items-center gap-2">
+                      <FileText className="w-5 h-5 text-emerald-600" />
+                      Physics Chapter 1 NCERT Related Articles
+                    </h2>
+                    <p className="text-sm text-zinc-500 mt-2">We have provided some chapters and important articles of Physics Chapter 1 here for you to check.</p>
+                  </div>
+                  <table className="w-full text-sm border-t border-zinc-100">
+                    <tbody className="divide-y divide-zinc-100">
+                      {[
+                        [
+                          { label: "Applications of Gauss's Law", url: 'https://collegedunia.com/exams/applications-of-gausss-law-overview-formula-and-derivations-physics-articleid-10' },
+                          { label: 'Charging by Induction', url: 'https://collegedunia.com/exams/charging-by-induction-definition-charged-objects-and-sample-questions-physics-articleid-869' },
+                        ],
+                        [
+                          { label: 'Electric Dipole', url: 'https://collegedunia.com/exams/class-12-physics-chapter-1-electric-dipole-articleid-16' },
+                          { label: 'Dipole in a Uniform External Field', url: 'https://collegedunia.com/exams/dipole-in-a-uniform-external-field-torque-and-its-calculation-physics-articleid-15' },
+                        ],
+                        [
+                          { label: "Maxwell's Equations", url: 'https://collegedunia.com/exams/maxwells-equations-deriving-equations-differential-form-physics-articleid-574' },
+                          { label: "Kirchhoff's Laws", url: 'https://collegedunia.com/exams/kirchhoffs-laws-kirchhoffs-current-and-voltage-laws-and-applications-physics-articleid-26' },
+                        ],
+                        [
+                          { label: 'Cells, EMF and Internal Resistance', url: 'https://collegedunia.com/exams/cells-emf-and-internal-resistance-introduction-and-equations-physics-articleid-30' },
+                          { label: 'Electrostatics', url: 'https://collegedunia.com/exams/electrostatics-coulombs-law-electric-field-electrostatic-pressure-physics-articleid-3841' },
+                        ],
+                        [
+                          { label: 'Unit of Electric Field', url: 'https://collegedunia.com/exams/electric-field-definition-formula-calculation-physics-articleid-2259' },
+                          { label: 'Electric Charges', url: 'https://collegedunia.com/exams/electric-charge-definition-formula-types-and-properties-physics-articleid-12' },
+                        ],
+                        [
+                          { label: 'Conservation of Charge', url: 'https://collegedunia.com/exams/conservation-of-charge-definition-formula-examples-articleid-3095' },
+                          { label: 'Electric Flux', url: 'https://collegedunia.com/exams/electric-flux-definition-formula-symbol-and-applications-physics-articleid-17' },
+                        ],
+                        [
+                          { label: 'Electric Field', url: 'https://collegedunia.com/exams/electric-field-definition-formula-and-electric-field-direction-physics-articleid-13' },
+                          { label: 'Electrostatic Potential and Capacitance', url: 'https://collegedunia.com/exams/electrostatic-potential-and-capacitance-introduction-and-derivation-physics-articleid-24' },
+                        ],
+                      ].map((row, ri) => (
+                        <tr key={ri} className="hover:bg-emerald-50/30 transition-colors">
+                          {row.map((cell, ci) => (
+                            <td key={ci} className="px-6 py-3">
+                              <a href={cell.url} target="_blank" rel="noopener noreferrer"
+                                className="font-bold text-emerald-700 hover:text-emerald-900 hover:underline transition-colors text-sm">
+                                {cell.label}
+                              </a>
+                            </td>
+                          ))}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </section>
+
+                {/* Important Topics */}
+                <section className="bg-white rounded-[2rem] border border-zinc-200 p-8 space-y-5">
+                  <h2 className="text-xl font-bold text-zinc-900 flex items-center gap-2">
+                    <Info className="w-5 h-5 text-emerald-600" />
+                    Physics Chapter 1 NCERT: Important Topics of Electric Charges and Fields
+                  </h2>
+                  <p className="text-sm text-zinc-600">Some of the important topics of Class 12 Physics Chapter 1 are:</p>
+                  <div className="space-y-4 text-sm text-zinc-600">
+                    <p>An <strong>electric charge</strong> refers to the property of subatomic particles that leads it to experience a force when they are placed in an electric and magnetic field. Electric Charges are of two types – like charges and unlike charges:</p>
+                    <ol className="space-y-1 list-decimal list-inside">
+                      <li>Like Charges repel each other.</li>
+                      <li>Unlike Charges attract each other.</li>
+                    </ol>
+                    <p>An electric charge has <strong>3 fundamental properties</strong>: quantization, additive nature, and conservation of electric charge.</p>
+                    <div className="bg-emerald-50 border border-emerald-100 rounded-2xl p-5 space-y-3">
+                      <ul className="space-y-2">
+                        {[
+                          <span key={0}><strong>Quantization</strong> – The total charge of a body denotes the integral multiple of a basic quantum of charge.</span>,
+                          <span key={1}><strong>Additive</strong> – This property represents the total charge of a body as an algebraic sum of all the singular charges that act on the system.</span>,
+                          <span key={2}><strong>Conservation</strong> – This property expresses that the total charge of a system is not affected with time. Charges can neither be created nor destroyed.</span>,
+                        ].map((item, i) => (
+                          <li key={i} className="flex items-start gap-3 text-sm text-emerald-800">
+                            <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 shrink-0" />
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <ul className="space-y-2">
+                      {[
+                        <span key={0}><a href="https://collegedunia.com/exams/class-12-physics-chapter-1-coulomb-s-law-articleid-11" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:underline font-semibold">Coulomb's law</a> states that the mutual electrostatic force that exists between two point charges A and B is directly proportional to their product, AB and inversely proportional to the square of the distance between them.</span>,
+                        'Electric flux is the total number of electric field lines that pass through a given area in a unit of time.',
+                        'The electric flux Δθ through an area element of ΔS can be denoted by Δθ = E · ΔS cosθ.',
+                        'Conductors are the objects that assist in the movement of electric charge. Examples of Conductors – Human bodies, Earth, metal, etc.',
+                        'Insulators offer resistance to the flow of electricity through them. Examples of Insulators – Nylon, Wood, Porcelain, etc.',
+                        <span key={4}><strong>Gauss's law</strong> states that the total amount of <a href="https://collegedunia.com/exams/electric-flux-definition-formula-symbol-and-applications-physics-articleid-17" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:underline">electric flux</a> that passes through a closed surface is directly proportional to the enclosed electric charge. The Gauss law formula is expressed by: <strong className="font-mono">Φ = q/ε₀</strong></span>,
+                      ].map((item, i) => (
+                        <li key={i} className="flex items-start gap-3 text-sm text-zinc-600">
+                          <div className="w-1.5 h-1.5 rounded-full bg-emerald-400 mt-2 shrink-0" />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </section>
+
+                {/* Check-Out Resources */}
+                <section className="bg-white rounded-[2rem] border border-zinc-200 overflow-hidden">
+                  <div className="p-8 pb-4">
+                    <h2 className="text-xl font-bold text-zinc-900">Check-Out More Resources</h2>
+                  </div>
+                  <table className="w-full text-sm border-t border-zinc-100">
+                    <tbody className="divide-y divide-zinc-100">
+                      {[
+                        [
+                          { label: 'NCERT Solutions for Class 12 Physics', url: 'https://collegedunia.com/exams/ncert-chapterwise-solutions-for-class-12-physics-articleid-4091' },
+                          { label: 'Class 12 Physics Notes', url: 'https://collegedunia.com/exams/cbse-class-xii/physics' },
+                          { label: 'Formulas in Physics', url: 'https://collegedunia.com/exams/physics-formulas-notes-and-examples-articleid-4112' },
+                        ],
+                        [
+                          { label: 'Topics for Comparison in Physics', url: 'https://collegedunia.com/exams/difference-between-in-physics-articleid-4821' },
+                          { label: 'Choice-based questions in Physics', url: 'https://collegedunia.com/exams/physics-mcqs-answers-with-explanations-articleid-6330' },
+                          { label: 'Topics in relation to Physics', url: 'https://collegedunia.com/exams/relation-between-articles-physics-articleid-4832' },
+                        ],
+                        [
+                          { label: 'Physics Study Notes', url: 'https://collegedunia.com/exams/physics-laws-formulas-derivations-study-guides-notes-articleid-4565' },
+                          { label: 'Class 12 Physics Book PDF', url: 'https://collegedunia.com/exams/ncert-class-12-physics-book-pdf-articleid-6458' },
+                          { label: 'Class 12 Physics Practicals', url: 'https://collegedunia.com/exams/cbse-class-xii/physics-practical' },
+                        ],
+                      ].map((row, ri) => (
+                        <tr key={ri} className="hover:bg-zinc-50/50 transition-colors">
+                          {row.map((cell, ci) => (
+                            <td key={ci} className="px-6 py-3">
+                              <a href={cell.url} target="_blank" rel="noopener noreferrer"
+                                className="font-bold text-emerald-700 hover:text-emerald-900 hover:underline transition-colors text-sm">
+                                {cell.label}
+                              </a>
+                            </td>
+                          ))}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </section>
+
+              </div>
+            )}
           </div>
 
           <RelatedSidebar

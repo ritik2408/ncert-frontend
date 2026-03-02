@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Landing from './pages/Landing';
 import SubjectHub from './pages/SubjectHub';
 import ChapterDetail from './pages/ChapterDetail';
+import ChapterResourceDetail from './pages/ChapterResourceDetail';
 import Solutions from './pages/Solutions';
 import Notes from './pages/Notes';
 import Exemplar from './pages/Exemplar';
@@ -26,6 +27,8 @@ export default function App() {
         <Route path="/formulas" element={<FormulaSheets />} />
         <Route path="/:classLevel/:subjectSlug/:resourceType?" element={<SubjectHub />} />
         <Route path="/chapter/:id" element={<ChapterDetail />} />
+        <Route path="/chapter/:id/solutions" element={<ChapterDetail />} />
+        <Route path="/chapter/:id/:resourceType" element={<ChapterResourceDetail />} />
       </Routes>
     </Router>
   );

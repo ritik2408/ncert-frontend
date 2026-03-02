@@ -698,7 +698,7 @@ export default function SubjectHub() {
                             transition={{ delay: index * 0.06 }}
                           >
                             <Link
-                              to={`/chapter/${chapter.id}`}
+                              to={`/chapter/${chapter.id}/${selectedResourceType || 'solutions'}`}
                               className="group block bg-white border border-zinc-200 rounded-2xl overflow-hidden hover:border-rose-300 hover:shadow-lg transition-all"
                             >
                               {/* card header */}
@@ -755,7 +755,7 @@ export default function SubjectHub() {
                             transition={{ delay: index * 0.1 }}
                           >
                             <Link
-                              to={`/chapter/${chapter.id}`}
+                              to={`/chapter/${chapter.id}/${selectedResourceType || 'solutions'}`}
                               className="group block bg-white border border-zinc-200 p-6 rounded-2xl hover:border-emerald-500 hover:shadow-lg transition-all"
                             >
                               <div className="flex items-center justify-between">
@@ -1087,6 +1087,696 @@ export default function SubjectHub() {
                               </div>
                               <div className="px-6 py-4">
                                 <p className="text-sm text-zinc-600 leading-relaxed"><strong>Ans.</strong> {faq.a}</p>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </section>
+
+                    </div>
+                  )}
+
+                  {/* Formulas-specific content for Class 12 Physics */}
+                  {classLevel === 'class-12' && subjectSlug === 'physics' && selectedResourceType === 'formulas' && (
+                    <div className="space-y-8">
+
+                      {/* Intro */}
+                      <section className="bg-white rounded-[2rem] border border-zinc-200 p-8 space-y-5">
+                        <p className="text-zinc-700 leading-relaxed text-sm">
+                          Class 12 Physics, <strong>carrying 70 marks in theory in the CBSE board exam is a high scoring subject, but it comes with the maximum number of numerical questions.</strong>
+                        </p>
+                        <ul className="space-y-2">
+                          {[
+                            <span key={0}>Most questions in units like <strong>Electrostatics, Current Electricity, Optics, and Modern Physics are directly formula-based.</strong></span>,
+                            <span key={1}><strong>Approx 35% of the 70 marks theory paper are numericals, which require formulas to solve the questions.</strong></span>,
+                            <span key={2}><strong>You can get around 15–20 marks of direct formula application based questions in Class 12 Physics.</strong></span>,
+                            'So to score well, you need to focus more on understanding and remembering the formula as well as the application of the formula in numericals.',
+                            <span key={3}>As competitive exams like JEE Main and board exams are formula based, having access to a structured <strong>Class 12 Physics Formula sheet</strong> is important for quick revision and error-free problem-solving.</span>,
+                          ].map((item, i) => (
+                            <li key={i} className="flex items-start gap-3 text-sm text-zinc-600">
+                              <div className="w-1.5 h-1.5 rounded-full bg-rose-400 mt-2 shrink-0" />
+                              <span>{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </section>
+
+                      {/* Chapter-wise Formula Links Table */}
+                      <section className="bg-white rounded-[2rem] border border-zinc-200 overflow-hidden">
+                        <div className="p-8 pb-4">
+                          <h2 className="text-xl font-bold text-zinc-900 flex items-center gap-3">
+                            <Hash className="w-5 h-5 text-rose-500" />
+                            Class 12 Physics: Chapter-Wise Formula Table
+                          </h2>
+                        </div>
+                        <div className="space-y-0">
+                          {[
+                            {
+                              ch: 'Chapter 1: Electric Charges and Fields', formulas: [
+                                { name: 'Electric Field Formula', url: 'https://collegedunia.com/exams/electric-field-formula-applications-unit-and-solved-examples-physics-articleid-2913' },
+                                { name: 'Charge Density Formula', url: 'https://collegedunia.com/exams/charge-density-formula-applications-solved-examples-physics-articleid-4182' },
+                                { name: 'Surface Charge Density Formula', url: 'https://collegedunia.com/exams/surface-charge-density-formula-application-with-solved-solutions-chemistry-articleid-2564' },
+                                { name: 'Force of Attraction Formula', url: 'https://collegedunia.com/exams/force-of-attraction-formula-gravity-gravitational-force-constant-examples-physics-articleid-4335' },
+                              ]
+                            },
+                            {
+                              ch: 'Chapter 2: Electrostatic Potential and Capacitance', formulas: [
+                                { name: 'Potential Energy Formula', url: 'https://collegedunia.com/exams/potential-energy-formula-types-derivation-equation-examples-phyiscs-articleid-2445' },
+                                { name: 'Capacitance Formula', url: 'https://collegedunia.com/exams/capacitance-formula-definition-unit-and-sample-questions-physics-articleid-2292' },
+                                { name: 'Capacitors in Parallel Formula', url: 'https://collegedunia.com/exams/capacitors-in-parallel-formula-applications-and-important-questions-physics-articleid-928' },
+                                { name: 'Voltage Divider Formula', url: 'https://collegedunia.com/exams/voltage-divider-formula-resistive-voltage-divider-applications-questions-articleid-4427' },
+                                { name: 'Energy Density Formula', url: 'https://collegedunia.com/exams/energy-density-formula-definition-and-solved-exam-physics-articleid-4034' },
+                              ]
+                            },
+                            {
+                              ch: 'Chapter 3: Current Electricity', formulas: [
+                                { name: 'Electrical Current Formula', url: 'https://collegedunia.com/exams/electrical-current-definition-types-effects-unit-and-measurement-physics-articleid-1200' },
+                                { name: 'Drift Velocity Formula', url: 'https://collegedunia.com/exams/drift-velocity-types-calculation-relation-and-sample-questions-physics-articleid-936' },
+                                { name: 'Current Density Formula', url: 'https://collegedunia.com/exams/current-density-formula-symbol-unit-physics-articleid-3584' },
+                                { name: 'Resistance Formula', url: 'https://collegedunia.com/exams/resistance-formula-concept-example-physics-articleid-2137' },
+                                { name: 'Resistivity Formula', url: 'https://collegedunia.com/exams/resistivity-formula-and-solved-examples-physics-articleid-2135' },
+                                { name: 'EMF Formula', url: 'https://collegedunia.com/exams/emf-formula-equation-explanation-and-solved-examples-physics-articleid-2912' },
+                                { name: 'Internal Resistance Formula', url: 'https://collegedunia.com/exams/internal-resistance-formula-and-examples-physics-articleid-3072' },
+                                { name: 'Electric Power Formula', url: 'https://collegedunia.com/exams/electric-power-formula-derivation-power-energy-formula-physics-articleid-2139' },
+                                { name: 'Time Constant Formula', url: 'https://collegedunia.com/exams/time-constant-formula-voltage-capacitor-and-solved-examples-physics-articleid-4327' },
+                              ]
+                            },
+                            {
+                              ch: 'Chapter 4: Moving Charges and Magnetism', formulas: [
+                                { name: 'Magnetic Induction Formula', url: 'https://collegedunia.com/exams/magnetic-induction-formula-faradays-law-of-induction-physics-articleid-2439' },
+                                { name: 'Magnetic Flux Formula', url: 'https://collegedunia.com/exams/magnetic-flux-formula-density-examples-measurement-sample-questions-physics-articleid-3976' },
+                                { name: 'Magnetic Field in a Solenoid Formula', url: 'https://collegedunia.com/exams/magnetic-field-in-a-solenoid-formula-solved-examples-physics-articleid-2027' },
+                                { name: 'Torque Formula', url: 'https://collegedunia.com/exams/torque-formula-definition-solved-examples-physics-articleid-2131' },
+                                { name: 'Magnetism Formula', url: 'https://collegedunia.com/exams/magnetism-formula-magnetic-field-and-biot-savart-law-articleid-4348' },
+                              ]
+                            },
+                            {
+                              ch: 'Chapter 5: Magnetism and Matter', formulas: [
+                                { name: 'Magnetism Formula', url: 'https://collegedunia.com/exams/magnetism-formula-magnetic-field-and-biot-savart-law-articleid-4348' },
+                                { name: 'Angular Momentum Formula', url: 'https://collegedunia.com/exams/angular-momentum-definition-formula-and-example-physics-articleid-1020' },
+                              ]
+                            },
+                            {
+                              ch: 'Chapter 6: Electromagnetic Induction', formulas: [
+                                { name: 'Inductance Formula', url: 'https://collegedunia.com/exams/inductance-formula-unit-types-and-sample-questions-physics-articleid-2476' },
+                                { name: 'EMF Formula', url: 'https://collegedunia.com/exams/emf-formula-equation-explanation-and-solved-examples-physics-articleid-2912' },
+                              ]
+                            },
+                            {
+                              ch: 'Chapter 7: Alternating Current', formulas: [
+                                { name: 'Capacitive Reactance Formula', url: 'https://collegedunia.com/exams/capacitive-reactance-formula-si-unit-and-frequency-physics-articleid-2448' },
+                                { name: 'Resonant Frequency Formula', url: 'https://collegedunia.com/exams/resonant-frequency-formula-series-and-parallel-resonance-examples-articleid-4137' },
+                                { name: 'Transformer Formula', url: 'https://collegedunia.com/exams/transformer-formula-definition-types-principle-physics-articleid-2350' },
+                              ]
+                            },
+                            {
+                              ch: 'Chapter 8: Electromagnetic Waves', formulas: [
+                                { name: 'Wave Speed Formula', url: 'https://collegedunia.com/exams/wave-speed-formula-meaning-properties-and-examples-physics-articleid-6463' },
+                                { name: 'Wavelength Formula', url: 'https://collegedunia.com/exams/wavelength-formula-derivation-wiens-law-energy-photon-physics-articleid-1401' },
+                                { name: 'Wavelength to Frequency Formula', url: 'https://collegedunia.com/exams/wavelength-to-frequency-formula-with-solved-examples-physics-articleid-3885' },
+                                { name: 'Intensity Formula', url: 'https://collegedunia.com/exams/intensity-formula-sound-and-wave-intensity-solved-examples-physics-articleid-2890' },
+                              ]
+                            },
+                            {
+                              ch: 'Chapter 9: Ray Optics and Optical Instruments', formulas: [
+                                { name: 'Mirror Formula', url: 'https://collegedunia.com/exams/mirror-formula-equation-applications-and-sample-questions-physics-articleid-967' },
+                                { name: 'Derivation of Mirror Formula', url: 'https://collegedunia.com/exams/mirror-formula-derivation-definition-and-applications-physics-articleid-2417' },
+                                { name: 'Derivation of Prism Formula', url: 'https://collegedunia.com/exams/prism-formula-definition-types-formula-and-derivation-physics-articleid-2479' },
+                                { name: 'Refractive Index Formula', url: 'https://collegedunia.com/exams/refractive-index-formula-snells-law-of-refraction-physics-articleid-2941' },
+                                { name: "Critical Angle Formula", url: 'https://collegedunia.com/exams/critical-angle-formula-total-internal-reflection-and-examples-physics-articleid-1436' },
+                                { name: "Brewster's Law Formula", url: 'https://collegedunia.com/exams/brewsters-law-explanation-formula-derivation-physics-articleid-4116' },
+                              ]
+                            },
+                            {
+                              ch: 'Chapter 10: Wave Optics', formulas: [
+                                { name: 'Doppler Effect Formula', url: 'https://collegedunia.com/exams/doppler-effect-formula-equations-and-solved-questions-physics-articleid-1329' },
+                                { name: 'Amplitude Formula', url: 'https://collegedunia.com/exams/amplitude-formula-types-of-amplitude-and-solved-examples-physics-articleid-2106' },
+                                { name: 'Longitudinal Waves Formula', url: 'https://collegedunia.com/exams/longitudinal-waves-definition-formula-types-and-example-physics-articleid-984' },
+                                { name: 'Wave Energy Formula', url: 'https://collegedunia.com/exams/wave-energy-formula-derivation-advantages-disadvantages-physics-articleid-4767' },
+                                { name: 'Beat Frequency Formula', url: 'https://collegedunia.com/exams/beat-frequency-articleid-4211' },
+                              ]
+                            },
+                            {
+                              ch: 'Chapter 11: Dual Nature of Radiation and Matter', formulas: [
+                                { name: 'De Broglie Wavelength Formula', url: 'https://collegedunia.com/exams/de-broglie-wavelength-formula-equation-and-derivation-chemistry-articleid-2906' },
+                                { name: 'Energy Level Formula', url: 'https://collegedunia.com/exams/energy-level-formula-solved-examples-physics-articleid-4256' },
+                                { name: 'Relativistic Mass Formula', url: 'https://collegedunia.com/exams/relativistic-mass-formula-with-solve-examples-physics-articleid-4476' },
+                                { name: 'Time Dilation Formula', url: 'https://collegedunia.com/exams/time-dilation-formula-formula-solved-examples-physics-articleid-4609' },
+                                { name: 'Rest Mass of Electron Formula', url: 'https://collegedunia.com/exams/electron-mass-definition-rest-mass-of-electron-formula-and-derivation-physics-articleid-1199' },
+                              ]
+                            },
+                            {
+                              ch: 'Chapter 12: Atoms', formulas: [
+                                { name: 'Bohr Radius Formula', url: 'https://collegedunia.com/exams/bohr-radius-explanation-formula-equation-units-physics-articleid-976' },
+                                { name: 'Energy Level Formula', url: 'https://collegedunia.com/exams/energy-level-formula-solved-examples-physics-articleid-4256' },
+                              ]
+                            },
+                            {
+                              ch: 'Chapter 13: Nuclei', formulas: [
+                                { name: 'Binding Energy Formula', url: 'https://collegedunia.com/exams/binding-energy-formula-mass-defect-solved-examples-physics-articleid-1293' },
+                                { name: 'Radioactive Decay Formula', url: 'https://collegedunia.com/exams/radioactive-decay-formula-types-law-mass-defect-physics-articleid-2455' },
+                                { name: 'Lattice Energy Formula', url: 'https://collegedunia.com/exams/lattice-energy-formula-solved-examples-physics-articleid-4249' },
+                              ]
+                            },
+                            {
+                              ch: 'Chapter 14: Semiconductor Electronics', formulas: [
+                                { name: 'Semiconductor Formula', url: 'https://collegedunia.com/exams/semiconductor-formula-explanation-examples-physics-articleid-4341' },
+                                { name: 'Electrical Formula', url: 'https://collegedunia.com/exams/electrical-formulas-electric-field-potential-difference-electrical-charge-science-articleid-1422' },
+                                { name: 'Electric Power Formula', url: 'https://collegedunia.com/exams/electric-power-formula-derivation-power-energy-formula-physics-articleid-2139' },
+                              ]
+                            },
+                          ].map((chap, ci) => (
+                            <div key={ci} className="border-t border-zinc-100 first:border-t-0">
+                              <div className="px-8 py-3 bg-rose-50/50">
+                                <p className="font-bold text-zinc-800 text-sm">{chap.ch}</p>
+                              </div>
+                              <table className="w-full text-sm">
+                                <thead className="bg-zinc-50 text-zinc-500 font-bold uppercase tracking-wider text-xs">
+                                  <tr>
+                                    <th className="px-8 py-2 text-left">Formula Name</th>
+                                    <th className="px-8 py-2 text-right">View Formula Sheet</th>
+                                  </tr>
+                                </thead>
+                                <tbody className="divide-y divide-zinc-50">
+                                  {chap.formulas.map((f, fi) => (
+                                    <tr key={fi} className="hover:bg-rose-50/30 transition-colors">
+                                      <td className="px-8 py-2.5 text-zinc-700">{f.name}</td>
+                                      <td className="px-8 py-2.5 text-right">
+                                        <a href={f.url} target="_blank" rel="noopener noreferrer"
+                                          className="text-rose-600 hover:text-rose-800 hover:underline font-medium text-xs transition-colors">
+                                          View Formula Sheet →
+                                        </a>
+                                      </td>
+                                    </tr>
+                                  ))}
+                                </tbody>
+                              </table>
+                            </div>
+                          ))}
+                        </div>
+                      </section>
+
+                      {/* Basic Formulas Quick Reference */}
+                      <section className="bg-white rounded-[2rem] border border-zinc-200 p-8 space-y-6">
+                        <h2 className="text-xl font-bold text-zinc-900 flex items-center gap-3">
+                          <Hash className="w-5 h-5 text-rose-500" />
+                          Class 12 Physics Basic Formulas
+                        </h2>
+                        <ul className="space-y-1.5">
+                          {[
+                            <span key={0}><strong>Class 12 Physics Basic Formulas</strong> include important equations from <strong>Electrostatics, Current Electricity, Magnetism, Optics, and Modern Physics.</strong></span>,
+                            'These formulas help students solve numerical problems in board exams and understand core concepts easily.',
+                            'Learning and revising these basic formulas regularly is essential for scoring well in Class 12 Physics.',
+                          ].map((t, i) => (
+                            <li key={i} className="flex items-start gap-3 text-sm text-zinc-600">
+                              <div className="w-1.5 h-1.5 rounded-full bg-rose-400 mt-2 shrink-0" />
+                              <span>{t}</span>
+                            </li>
+                          ))}
+                        </ul>
+
+                        <div className="grid md:grid-cols-2 gap-4">
+                          {[
+                            {
+                              unit: 'Electrostatics', color: 'blue', rows: [
+                                { name: "Coulomb's Law", formula: "F = kq₁q₂ / r²" },
+                                { name: 'Electric Field', formula: 'E = F/q' },
+                                { name: 'Electric Potential', formula: 'V = W/q' },
+                                { name: 'Capacitance', formula: 'C = Q/V' },
+                                { name: 'Energy Stored in Capacitor', formula: 'U = ½CV²' },
+                                { name: 'Capacitors in Parallel', formula: 'C = C₁ + C₂' },
+                                { name: 'Capacitors in Series', formula: '1/C = 1/C₁ + 1/C₂' },
+                              ]
+                            },
+                            {
+                              unit: 'Current Electricity', color: 'green', rows: [
+                                { name: "Ohm's Law", formula: 'V = IR' },
+                                { name: 'Resistance', formula: 'R = ρL/A' },
+                                { name: 'Electric Power', formula: 'P = VI' },
+                                { name: 'Electrical Energy', formula: 'E = Pt' },
+                                { name: 'Drift Velocity', formula: 'v = I / (nqA)' },
+                                { name: 'EMF', formula: 'ε = V + Ir' },
+                              ]
+                            },
+                            {
+                              unit: 'Magnetism & Moving Charges', color: 'purple', rows: [
+                                { name: 'Magnetic Force', formula: 'F = qvB sinθ' },
+                                { name: 'Force on Current', formula: 'F = BIL sinθ' },
+                                { name: 'Magnetic Field (Solenoid)', formula: 'B = μ₀ n I' },
+                                { name: 'Lorentz Force', formula: 'F = q(E + v × B)' },
+                              ]
+                            },
+                            {
+                              unit: 'Electromagnetic Induction', color: 'orange', rows: [
+                                { name: "Faraday's Law", formula: 'ε = − dΦ/dt' },
+                                { name: 'Magnetic Flux', formula: 'Φ = BA cosθ' },
+                                { name: 'Inductance', formula: 'V = L (di/dt)' },
+                              ]
+                            },
+                            {
+                              unit: 'Alternating Current', color: 'teal', rows: [
+                                { name: 'RMS Voltage', formula: 'V₍rms₎ = V₀/√2' },
+                                { name: 'Reactance', formula: 'Xₗ = ωL, Xc = 1/ωC' },
+                                { name: 'Impedance', formula: 'Z = √(R² + (Xₗ − Xc)²)' },
+                              ]
+                            },
+                            {
+                              unit: 'Ray Optics', color: 'amber', rows: [
+                                { name: 'Mirror Formula', formula: '1/f = 1/v + 1/u' },
+                                { name: 'Lens Formula', formula: '1/f = 1/v − 1/u' },
+                                { name: 'Magnification', formula: 'm = v/u' },
+                                { name: "Snell's Law", formula: 'n₁ sinθ₁ = n₂ sinθ₂' },
+                              ]
+                            },
+                            {
+                              unit: 'Wave Optics', color: 'indigo', rows: [
+                                { name: 'Wave Speed', formula: 'v = fλ' },
+                                { name: "Young's Double Slit", formula: 'β = λD/d' },
+                              ]
+                            },
+                            {
+                              unit: 'Modern Physics', color: 'rose', rows: [
+                                { name: 'Photoelectric Equation', formula: 'E = hf − φ' },
+                                { name: 'De Broglie Wavelength', formula: 'λ = h/p' },
+                                { name: 'Radioactive Decay', formula: 'N = N₀ e^(−λt)' },
+                                { name: 'Energy Mass Relation', formula: 'E = mc²' },
+                                { name: 'Binding Energy', formula: 'Δm c²' },
+                              ]
+                            },
+                          ].map((unit, ui) => (
+                            <div key={ui} className="border border-zinc-100 rounded-2xl overflow-hidden">
+                              <div className="px-5 py-3 bg-zinc-50 border-b border-zinc-100">
+                                <p className="font-bold text-zinc-800 text-sm">{unit.unit}</p>
+                              </div>
+                              <table className="w-full text-xs">
+                                <thead className="text-zinc-400 uppercase tracking-wider text-[10px]">
+                                  <tr>
+                                    <th className="px-5 py-2 text-left font-bold">Formula Name</th>
+                                    <th className="px-5 py-2 text-right font-bold">Expression</th>
+                                  </tr>
+                                </thead>
+                                <tbody className="divide-y divide-zinc-50">
+                                  {unit.rows.map((r, ri) => (
+                                    <tr key={ri} className="hover:bg-rose-50/20 transition-colors">
+                                      <td className="px-5 py-2 text-zinc-600">{r.name}</td>
+                                      <td className="px-5 py-2 text-right font-mono font-bold text-rose-700">{r.formula}</td>
+                                    </tr>
+                                  ))}
+                                </tbody>
+                              </table>
+                            </div>
+                          ))}
+                        </div>
+                      </section>
+
+                      {/* Usage Tips */}
+                      <section className="bg-white rounded-[2rem] border border-zinc-200 p-8 space-y-4">
+                        <h2 className="text-xl font-bold text-zinc-900 flex items-center gap-3">
+                          <Lightbulb className="w-5 h-5 text-rose-500" />
+                          How to Use Class 12 Physics Formula Sheet Effectively?
+                        </h2>
+                        <ul className="space-y-3">
+                          {[
+                            'Revise formulas daily for 15–20 minutes to improve recall speed.',
+                            'Practice numerical questions immediately after revising formulas.',
+                            'Highlight frequently used formulas from high-weightage chapters like Optics and Electrostatics.',
+                            'Use formula sheets for quick revision one day before the board exam.',
+                          ].map((tip, i) => (
+                            <li key={i} className="flex items-start gap-3 text-sm text-zinc-600 bg-rose-50/40 border border-rose-100 rounded-xl px-4 py-3">
+                              <div className="w-5 h-5 rounded-full bg-rose-100 flex items-center justify-center shrink-0 mt-0.5">
+                                <span className="text-rose-600 font-bold text-xs">{i + 1}</span>
+                              </div>
+                              {tip}
+                            </li>
+                          ))}
+                        </ul>
+                      </section>
+
+                    </div>
+                  )}
+
+                  {/* Exemplar-specific content for Class 12 Physics */}
+                  {classLevel === 'class-12' && subjectSlug === 'physics' && selectedResourceType === 'exemplar' && (
+                    <div className="space-y-8">
+
+                      {/* Intro */}
+                      <section className="bg-white rounded-[2rem] border border-zinc-200 p-8 space-y-5">
+                        <p className="text-zinc-700 leading-relaxed text-sm">
+                          The NCERT <strong>Exemplar for Class 12 Physics is a supplementary practice book published by NCERT to strengthen conceptual understanding beyond the regular textbook exercises.</strong> While the NCERT textbook focuses on building fundamentals through theory, solved examples, and standard exercise questions, <em>the Exemplar is designed to test deeper application and analytical thinking.</em>
+                        </p>
+                        <ul className="space-y-2">
+                          {[
+                            <span key={0}>The <strong>NCERT textbook usually contains around 15–30 questions per chapter,</strong> mostly direct or moderate-level problems.</span>,
+                            <span key={1}>The <strong>Exemplar includes approximately 40–90 questions per chapter</strong>, offering nearly 2–3 times more practice questions.</span>,
+                            <span key={2}><strong>Around 40–50% of Exemplar questions are application-based, and nearly 30–35% require multi-concept reasoning,</strong> making it more challenging and suitable for strengthening problem-solving skills.</span>,
+                            'This Exemplar is available in PDF format, chapter-wise, in both English and Hindi mediums.',
+                          ].map((item, i) => (
+                            <li key={i} className="flex items-start gap-3 text-sm text-zinc-600">
+                              <div className="w-1.5 h-1.5 rounded-full bg-amber-400 mt-2 shrink-0" />
+                              <span>{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                        <div className="flex flex-wrap gap-3 pt-1">
+                          {[
+                            { label: 'NCERT Books Class 12 — Download Free PDF', href: 'https://collegedunia.com/exams/cbse-class-xii/ncert-textbook' },
+                            { label: 'CBSE Class 12 Chapter-Wise Weightage', href: 'https://collegedunia.com/exams/cbse-class-xii/chapter-wise-weightage' },
+                          ].map((l, i) => (
+                            <a key={i} href={l.href} target="_blank" rel="noopener noreferrer"
+                              className="text-xs font-semibold text-amber-700 bg-amber-50 border border-amber-200 rounded-full px-4 py-1.5 hover:bg-amber-100 transition-colors">
+                              {l.label} →
+                            </a>
+                          ))}
+                        </div>
+                      </section>
+
+                      {/* Chapter-wise PDFs — English */}
+                      <section className="bg-white rounded-[2rem] border border-zinc-200 overflow-hidden">
+                        <div className="p-8 pb-4">
+                          <h2 className="text-xl font-bold text-zinc-900 flex items-center gap-3">
+                            <Star className="w-5 h-5 text-amber-500" />
+                            Class 12 Physics NCERT Exemplar PDF (English)
+                          </h2>
+                        </div>
+                        <table className="w-full text-sm border-t border-zinc-100">
+                          <thead className="bg-zinc-50 text-zinc-500 font-bold uppercase tracking-wider text-xs">
+                            <tr><th className="px-6 py-3 text-left">S.No.</th><th className="px-6 py-3 text-left">Chapter-wise Exemplar PDFs</th></tr>
+                          </thead>
+                          <tbody className="divide-y divide-zinc-100">
+                            {[
+                              { n: 1, name: 'Electric Charges And Fields', url: 'https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/physics/leep101.pdf' },
+                              { n: 2, name: 'Electrostatic Potential And Capacitance', url: 'https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/physics/leep102.pdf' },
+                              { n: 3, name: 'Current Electricity', url: 'https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/physics/leep103.pdf' },
+                              { n: 4, name: 'Moving Charges And Magnetism', url: 'https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/physics/leep104.pdf' },
+                              { n: 5, name: 'Magnetism And Matter', url: 'https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/physics/leep105.pdf' },
+                              { n: 6, name: 'Electromagnetic Induction', url: 'https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/physics/leep106.pdf' },
+                              { n: 7, name: 'Alternating Current', url: 'https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/physics/leep107.pdf' },
+                              { n: 8, name: 'Electromagnetic Waves', url: 'https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/physics/leep108.pdf' },
+                              { n: 9, name: 'Ray Optics And Optical Instruments', url: 'https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/physics/leep109.pdf' },
+                              { n: 10, name: 'Wave Optics', url: 'https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/physics/leep110.pdf' },
+                              { n: 11, name: 'Dual Nature Of Radiation And Matter', url: 'https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/physics/leep111.pdf' },
+                              { n: 12, name: 'Atoms', url: 'https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/physics/leep112.pdf' },
+                              { n: 13, name: 'Nuclei', url: 'https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/physics/leep113.pdf' },
+                              { n: 14, name: 'Semiconductor Electronics', url: 'https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/physics/leep114.pdf' },
+                            ].map((ch) => (
+                              <tr key={ch.n} className="hover:bg-amber-50/30 transition-colors">
+                                <td className="px-6 py-3 text-zinc-500 font-medium">{ch.n}</td>
+                                <td className="px-6 py-3 font-medium text-zinc-800">
+                                  Chapter {ch.n} — <a href={ch.url} rel="nofollow" target="_blank" className="text-amber-600 hover:text-amber-800 hover:underline transition-colors">{ch.name}</a>
+                                </td>
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      </section>
+
+                      {/* Chapter-wise PDFs — Hindi */}
+                      <section className="bg-white rounded-[2rem] border border-zinc-200 overflow-hidden">
+                        <div className="p-8 pb-4">
+                          <h2 className="text-xl font-bold text-zinc-900 flex items-center gap-3">
+                            <Star className="w-5 h-5 text-amber-500" />
+                            Class 12 Physics NCERT Exemplar PDF (Hindi)
+                          </h2>
+                        </div>
+                        <table className="w-full text-sm border-t border-zinc-100">
+                          <thead className="bg-zinc-50 text-zinc-500 font-bold uppercase tracking-wider text-xs">
+                            <tr><th className="px-6 py-3 text-left">S.No.</th><th className="px-6 py-3 text-left">Chapter-wise Exemplar PDFs (Hindi)</th></tr>
+                          </thead>
+                          <tbody className="divide-y divide-zinc-100">
+                            {[
+                              { n: 1, name: 'अध्याय 1 - (वैधयुत आवेश तथा क्षेत्र)', url: 'https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/physics(hindi)/lhep101.pdf' },
+                              { n: 2, name: 'अध्याय 2 (स्थिर वैधयुत विभव तथा धारिता)', url: 'https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/physics(hindi)/lhep102.pdf' },
+                              { n: 3, name: 'अध्याय 3 (विद्युत धारा)', url: 'https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/physics(hindi)/lhep103.pdf' },
+                              { n: 4, name: 'अध्याय 4 (गतिमान आवेश और चुम्बकत्व)', url: 'https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/physics(hindi)/lhep104.pdf' },
+                              { n: 5, name: 'अध्याय 5 (चुम्बकत्व एवं द्रव्य)', url: 'https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/physics(hindi)/lhep105.pdf' },
+                              { n: 6, name: 'अध्याय 6 (वैधयुतचुम्बकीय प्रेरण)', url: 'https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/physics(hindi)/lhep106.pdf' },
+                              { n: 7, name: 'अध्याय 7 (प्रत्यावर्ती धारा)', url: 'https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/physics(hindi)/lhep107.pdf' },
+                              { n: 8, name: 'अध्याय 8 (विद्युत चुम्बकीय तरंगे)', url: 'https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/physics(hindi)/lhep108.pdf' },
+                              { n: 9, name: 'अध्याय 9 (किरण प्रकाशिकी एवं प्रकाशिक यंत्र)', url: 'https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/physics(hindi)/lhep109.pdf' },
+                              { n: 10, name: 'अध्याय 10 (तरंग-प्रकाशिकी)', url: 'https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/physics(hindi)/lhep110.pdf' },
+                              { n: 11, name: 'अध्याय 11 (विकिरण तथा द्रव्य कि द्वैत प्रकृति)', url: 'https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/physics(hindi)/lhep111.pdf' },
+                              { n: 12, name: 'अध्याय 12 (परमाणु)', url: 'https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/physics(hindi)/lhep112.pdf' },
+                              { n: 13, name: 'अध्याय 13 (नाभिक)', url: 'https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/physics(hindi)/lhep113.pdf' },
+                              { n: 14, name: 'अध्याय 14 (अर्धचालक इलेक्ट्रॉनिकी)', url: 'https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/physics(hindi)/lhep114.pdf' },
+                            ].map((ch) => (
+                              <tr key={ch.n} className="hover:bg-amber-50/30 transition-colors">
+                                <td className="px-6 py-3 text-zinc-500 font-medium">{ch.n}</td>
+                                <td className="px-6 py-3"><a href={ch.url} rel="nofollow" target="_blank" className="text-amber-600 hover:text-amber-800 hover:underline transition-colors">{ch.name}</a></td>
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      </section>
+
+                      {/* NCERT Textbook vs Exemplar */}
+                      <section className="bg-white rounded-[2rem] border border-zinc-200 p-8 space-y-5">
+                        <h2 className="text-xl font-bold text-zinc-900">What Are NCERT Books and NCERT Exemplar?</h2>
+                        <div className="grid md:grid-cols-2 gap-4">
+                          <div className="bg-blue-50 border border-blue-100 rounded-2xl p-5 space-y-3">
+                            <p className="font-bold text-blue-800 text-sm">NCERT Textbook</p>
+                            <ul className="space-y-1.5">
+                              {['Primary official resource for CBSE boards', 'Focuses on theory, derivations, and basic exercises', 'Covers fundamentals clearly', '80–85% of board theory questions come directly from it'].map((t, i) => (
+                                <li key={i} className="text-xs text-blue-700 flex items-start gap-2"><div className="w-1 h-1 rounded-full bg-blue-400 mt-1.5 shrink-0" />{t}</li>
+                              ))}
+                            </ul>
+                          </div>
+                          <div className="bg-amber-50 border border-amber-100 rounded-2xl p-5 space-y-3">
+                            <p className="font-bold text-amber-800 text-sm">NCERT Exemplar</p>
+                            <ul className="space-y-1.5">
+                              {['Supplementary practice book', 'Contains higher-order and advanced questions', '2–3x more practice questions per chapter', 'Strong focus on analytical and application-based problems', 'Useful for boards + competitive exams like JEE/NEET'].map((t, i) => (
+                                <li key={i} className="text-xs text-amber-700 flex items-start gap-2"><div className="w-1 h-1 rounded-full bg-amber-400 mt-1.5 shrink-0" />{t}</li>
+                              ))}
+                            </ul>
+                          </div>
+                        </div>
+                        <p className="text-sm text-zinc-500 italic">The Exemplar provides about 2–3x more practice problems per chapter, with a significant portion testing deeper analytical skills.</p>
+                      </section>
+
+                      {/* Chapter-wise Marks Weightage */}
+                      <section className="bg-white rounded-[2rem] border border-zinc-200 overflow-hidden">
+                        <div className="p-8 pb-4 space-y-2">
+                          <h2 className="text-xl font-bold text-zinc-900 flex items-center gap-2">
+                            <Target className="w-5 h-5 text-amber-500" />
+                            Class 12 Physics: Chapter-Wise Marks Weightage (Theory – 70 Marks)
+                          </h2>
+                          <p className="text-xs text-zinc-500">Approximate marks distribution based on recent trends and board blueprints. Total: 70 marks</p>
+                        </div>
+                        <div className="overflow-x-auto">
+                          <table className="w-full text-sm border-t border-zinc-100">
+                            <thead className="bg-zinc-50 text-zinc-500 font-bold uppercase tracking-wider text-xs">
+                              <tr>
+                                <th className="px-6 py-3 text-left">Chapter</th>
+                                <th className="px-6 py-3 text-center">Approx. Marks</th>
+                                <th className="px-6 py-3 text-center">% of Paper</th>
+                              </tr>
+                            </thead>
+                            <tbody className="divide-y divide-zinc-100">
+                              {[
+                                { ch: 'Electric Charges & Fields', marks: '~5', pct: '~7%' },
+                                { ch: 'Electrostatic Potential & Capacitance', marks: '~5', pct: '~7%' },
+                                { ch: 'Current Electricity', marks: '~6', pct: '~9%' },
+                                { ch: 'Moving Charges & Magnetism', marks: '~6', pct: '~9%' },
+                                { ch: 'Magnetism & Matter', marks: '~5', pct: '~7%' },
+                                { ch: 'Electromagnetic Induction', marks: '~4', pct: '~6%' },
+                                { ch: 'Alternating Current', marks: '~2', pct: '~3%' },
+                                { ch: 'Electromagnetic Waves', marks: '~4', pct: '~6%' },
+                                { ch: 'Ray Optics & Optical Instruments', marks: '~10', pct: '~14%' },
+                                { ch: 'Wave Optics', marks: '~4', pct: '~6%' },
+                                { ch: 'Dual Nature of Radiation & Matter', marks: '~4', pct: '~6%' },
+                                { ch: 'Atoms & Nuclei', marks: '~8', pct: '~11%' },
+                                { ch: 'Semiconductor Electronics', marks: '~7', pct: '~10%' },
+                              ].map((r, i) => (
+                                <tr key={i} className="hover:bg-amber-50/30 transition-colors">
+                                  <td className="px-6 py-3 text-zinc-800 font-medium">{r.ch}</td>
+                                  <td className="px-6 py-3 text-center font-bold text-amber-700">{r.marks}</td>
+                                  <td className="px-6 py-3 text-center text-zinc-500">{r.pct}</td>
+                                </tr>
+                              ))}
+                            </tbody>
+                          </table>
+                        </div>
+                        <div className="px-8 py-4 border-t border-zinc-100 text-sm text-zinc-600 italic">
+                          <em>Optics</em> (especially Ray Optics) emerges as the <strong>highest-weight chapter</strong>, while <em>Electrostatics</em>, <em>Magnetism</em>, and <em>Atoms & Nuclei</em> also contribute significantly.
+                        </div>
+                      </section>
+
+                      {/* Question Type Distribution */}
+                      <section className="bg-white rounded-[2rem] border border-zinc-200 overflow-hidden">
+                        <div className="p-8 pb-4">
+                          <h2 className="text-xl font-bold text-zinc-900 flex items-center gap-2">
+                            <GraduationCap className="w-5 h-5 text-amber-500" />
+                            How many questions are there in the NCERT Class 12 Physics Exemplar book?
+                          </h2>
+                          <p className="text-sm text-zinc-600 mt-3">The NCERT <strong>Class 12 Physics Exemplar contains 900+ questions spread across 14 chapters</strong> — roughly 30–35 questions on average per chapter.</p>
+                        </div>
+                        <div className="grid md:grid-cols-2 gap-0 divide-y md:divide-y-0 md:divide-x divide-zinc-100 border-t border-zinc-100">
+                          {/* Question type table */}
+                          <table className="w-full text-sm">
+                            <thead className="bg-zinc-50 text-zinc-500 text-xs font-bold uppercase tracking-wider">
+                              <tr><th className="px-6 py-3 text-left">Question Type</th><th className="px-6 py-3 text-right">Weightage</th></tr>
+                            </thead>
+                            <tbody className="divide-y divide-zinc-100">
+                              {[
+                                { type: 'MCQs (Single Correct)', wt: '30–35%' },
+                                { type: 'MCQs (Multiple Correct)', wt: '15–20%' },
+                                { type: 'Very Short Answer', wt: '10–15%' },
+                                { type: 'Short Answer', wt: '15–20%' },
+                                { type: 'Long Answer / Numerical', wt: '15–20%' },
+                              ].map((r, i) => (
+                                <tr key={i} className="hover:bg-amber-50/30 transition-colors">
+                                  <td className="px-6 py-3 text-zinc-700">{r.type}</td>
+                                  <td className="px-6 py-3 text-right font-bold text-amber-700">{r.wt}</td>
+                                </tr>
+                              ))}
+                            </tbody>
+                          </table>
+                          {/* Key insight */}
+                          <div className="p-6 space-y-3 bg-amber-50/30">
+                            <p className="text-sm font-semibold text-zinc-700">Chapter-wise Distribution Insight</p>
+                            {[
+                              <span key={0}><strong>About 30–35% are single-correct MCQs</strong>, which help build strong basic concepts.</span>,
+                              <span key={1}><strong>Around 15–20% are multiple-correct MCQs</strong>, which test deeper thinking.</span>,
+                              <span key={2}><strong>Very short and short answer questions together make up about 25–35%</strong>, helping students revise key concepts.</span>,
+                              <span key={3}>The <strong>remaining 15–20% are long answer or numerical problems</strong>, useful for improving problem-solving skills.</span>,
+                            ].map((t, i) => (
+                              <div key={i} className="flex items-start gap-2 text-xs text-zinc-600">
+                                <div className="w-1 h-1 rounded-full bg-amber-400 mt-1.5 shrink-0" />
+                                <span>{t}</span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      </section>
+
+                      {/* Chapter-wise question count table */}
+                      <section className="bg-white rounded-[2rem] border border-zinc-200 overflow-hidden">
+                        <div className="p-8 pb-4">
+                          <h2 className="text-xl font-bold text-zinc-900">Chapter-wise Question Distribution</h2>
+                        </div>
+                        <div className="overflow-x-auto">
+                          <table className="w-full text-xs border-t border-zinc-100">
+                            <thead className="bg-zinc-50 text-zinc-500 font-bold uppercase tracking-wider">
+                              <tr>
+                                <th className="px-4 py-3 text-left">Chapter</th>
+                                <th className="px-4 py-3 text-center">MCQ I</th>
+                                <th className="px-4 py-3 text-center">MCQ II</th>
+                                <th className="px-4 py-3 text-center">Very Short</th>
+                                <th className="px-4 py-3 text-center">Short</th>
+                                <th className="px-4 py-3 text-center">Long</th>
+                                <th className="px-4 py-3 text-center">Total</th>
+                              </tr>
+                            </thead>
+                            <tbody className="divide-y divide-zinc-100">
+                              {[
+                                { ch: 'Electric Charges and Fields', m1: 7, m2: 6, vs: 5, sa: 5, la: 8, total: '31' },
+                                { ch: 'Electrostatic Potential and Capacitance', m1: 6, m2: 7, vs: 5, sa: 5, la: 10, total: '33' },
+                                { ch: 'Current Electricity', m1: '~7', m2: '~6', vs: '~6', sa: '~6', la: '~7', total: '~32' },
+                                { ch: 'Moving Charges and Magnetism', m1: '~7', m2: '~6', vs: '~6', sa: '~6', la: '~7', total: '~32' },
+                                { ch: 'Magnetism and Matter', m1: '~6', m2: '~6', vs: '~5', sa: '~6', la: '~8', total: '~31' },
+                                { ch: 'Electromagnetic Induction', m1: '~7', m2: '~6', vs: '~6', sa: '~6', la: '~8', total: '~33' },
+                                { ch: 'Alternating Current', m1: 7, m2: 6, vs: 7, sa: 6, la: 5, total: '31' },
+                                { ch: 'Electromagnetic Waves', m1: '~6', m2: '~5', vs: '~5', sa: '~5', la: '~7', total: '~28–30' },
+                                { ch: 'Ray Optics and Optical Instruments', m1: '~7', m2: '~7', vs: '~6', sa: '~6', la: '~8', total: '~34' },
+                                { ch: 'Wave Optics', m1: '~6', m2: '~6', vs: '~5', sa: '~6', la: '~7', total: '~30' },
+                                { ch: 'Dual Nature of Radiation and Matter', m1: '~6', m2: '~6', vs: '~5', sa: '~5', la: '~7', total: '~29–31' },
+                                { ch: 'Atoms', m1: '~6', m2: '~5', vs: '~5', sa: '~5', la: '~6', total: '~27–29' },
+                                { ch: 'Nuclei', m1: '~6', m2: '~5', vs: '~5', sa: '~5', la: '~6', total: '~27–29' },
+                                { ch: 'Semiconductor Electronics', m1: '~7', m2: '~6', vs: '~6', sa: '~6', la: '~7', total: '~32' },
+                              ].map((r, i) => (
+                                <tr key={i} className="hover:bg-amber-50/30 transition-colors">
+                                  <td className="px-4 py-2.5 text-zinc-700 font-medium">{r.ch}</td>
+                                  <td className="px-4 py-2.5 text-center text-zinc-500">{r.m1}</td>
+                                  <td className="px-4 py-2.5 text-center text-zinc-500">{r.m2}</td>
+                                  <td className="px-4 py-2.5 text-center text-zinc-500">{r.vs}</td>
+                                  <td className="px-4 py-2.5 text-center text-zinc-500">{r.sa}</td>
+                                  <td className="px-4 py-2.5 text-center text-zinc-500">{r.la}</td>
+                                  <td className="px-4 py-2.5 text-center font-bold text-amber-700">{r.total}</td>
+                                </tr>
+                              ))}
+                            </tbody>
+                          </table>
+                        </div>
+                      </section>
+
+                      {/* FAQ */}
+                      <section className="bg-white rounded-[2rem] border border-zinc-200 p-8 space-y-4">
+                        <h2 className="text-xl font-bold text-zinc-900 flex items-center gap-2">
+                          <GraduationCap className="w-5 h-5 text-amber-500" />
+                          FAQs
+                        </h2>
+                        <div className="border border-zinc-100 rounded-2xl overflow-hidden">
+                          <div className="px-6 py-4 bg-zinc-50">
+                            <p className="font-bold text-zinc-800 text-sm">Q. How closely do Exemplar questions match CBSE Board exam difficulty?</p>
+                          </div>
+                          <div className="px-6 py-4 space-y-3 text-sm text-zinc-600">
+                            <p><strong>Ans.</strong> Exemplar <strong>questions are typically 20–30% more application-oriented than standard NCERT textbook exercises.</strong></p>
+                            <ul className="space-y-1">
+                              {['CBSE Board Papers: ~60% direct/NCERT-based', 'Exemplar: Focus on higher-order thinking & derivation-based numericals'].map((t, i) => (
+                                <li key={i} className="flex items-start gap-2 text-xs"><div className="w-1 h-1 rounded-full bg-amber-400 mt-1.5 shrink-0" />{t}</li>
+                              ))}
+                            </ul>
+                            <p className="text-xs text-zinc-500">In recent CBSE Physics board papers, <strong>nearly 15–20% of the 3–5 mark questions show similarity in pattern</strong> with Exemplar problems, especially from Electrostatics, Magnetism, and Ray Optics.</p>
+                          </div>
+                        </div>
+                      </section>
+
+                      {/* When to Start */}
+                      <section className="bg-white rounded-[2rem] border border-zinc-200 p-8 space-y-5">
+                        <h2 className="text-xl font-bold text-zinc-900 flex items-center gap-2">
+                          <Lightbulb className="w-5 h-5 text-amber-500" />
+                          What Is the Perfect Time to Start NCERT Exemplar for Class 12 Physics?
+                        </h2>
+                        <p className="text-sm text-zinc-600 leading-relaxed">
+                          The perfect time is after achieving <strong>70–80% comfort with textbook exercises</strong>, but at least 3–4 months before final exams — <em>ideally between July and September in the Class 12 academic cycle.</em>
+                        </p>
+                        <div className="grid md:grid-cols-2 gap-4">
+                          <div className="bg-blue-50 border border-blue-100 rounded-2xl p-5 space-y-3">
+                            <p className="font-bold text-blue-800 text-sm">Scenario 1: CBSE Board-Focused Student</p>
+                            <p className="text-xs text-zinc-600 font-semibold">Best Time: 2–3 weeks after starting each chapter</p>
+                            <p className="text-xs text-zinc-600">Exemplar questions assume you already understand derivations, can apply formulas, and can solve moderate-level numericals independently.</p>
+                            <ul className="space-y-1">
+                              {['~40–45% of recent CBSE paper is competency-based', 'Numerical + case-based questions form ~35–40% of total marks', 'Pure theory recall is now less than 30%'].map((t, i) => (
+                                <li key={i} className="text-xs text-blue-700 flex items-start gap-1.5"><div className="w-1 h-1 rounded-full bg-blue-400 mt-1.5 shrink-0" />{t}</li>
+                              ))}
+                            </ul>
+                          </div>
+                          <div className="bg-amber-50 border border-amber-100 rounded-2xl p-5 space-y-3">
+                            <p className="font-bold text-amber-800 text-sm">Scenario 2: JEE Main / NEET Aspirants</p>
+                            <p className="text-xs text-zinc-600 font-semibold">Best Time: Immediately after completing textbook examples</p>
+                            <ol className="space-y-1 list-decimal list-inside">
+                              {['Read theory', 'Solve solved examples', 'Move directly to Exemplar', 'Then attempt coaching material'].map((t, i) => (
+                                <li key={i} className="text-xs text-amber-700">{t}</li>
+                              ))}
+                            </ol>
+                            <p className="text-xs text-zinc-500">Students who solve Exemplar alongside textbook make fewer formula mistakes, develop better unit analysis skills, and improve calculation speed.</p>
+                          </div>
+                        </div>
+                      </section>
+
+                      {/* Month-wise study plan */}
+                      <section className="bg-white rounded-[2rem] border border-zinc-200 p-8 space-y-4">
+                        <h2 className="text-xl font-bold text-zinc-900 flex items-center gap-2">
+                          <Target className="w-5 h-5 text-amber-500" />
+                          Class 12 Academic Year Strategy (Month-Wise Plan)
+                        </h2>
+                        <div className="space-y-3">
+                          {[
+                            { phase: 'April–June (Early Session)', focus: 'Build Concept Clarity', tips: ['Complete textbook chapters properly', 'Solve in-text examples', 'DO NOT rush to Exemplar yet'], note: '70% of students still struggle with core derivations (like Gauss\'s law, AC circuits) at this stage.' },
+                            { phase: 'July–September (Mid Session) → PERFECT TIME', focus: 'Start Exemplar Chapter-wise', tips: ['50–60% syllabus is covered', 'Concepts are clearer', 'You can identify weak areas'], note: 'Students who start advanced practice before September show better retention with ~25–30% improved long-term memory.' },
+                            { phase: 'October–December (Pre-Boards Phase)', focus: 'Revision + Mistake Detection', tips: ['Solve only difficult Exemplar questions', 'Focus on Current Electricity, Magnetism, Ray Optics, AC Circuits', 'These chapters carry ~35–40% combined board weightage'], note: 'Use Exemplar as a revision tool, not the primary source at this stage.' },
+                          ].map((p, i) => (
+                            <div key={i} className="border border-zinc-100 rounded-2xl overflow-hidden">
+                              <div className="px-6 py-3 bg-amber-50 border-b border-amber-100">
+                                <p className="font-bold text-amber-800 text-sm">{p.phase}</p>
+                                <p className="text-xs text-amber-600">{p.focus}</p>
+                              </div>
+                              <div className="px-6 py-4 space-y-2">
+                                <ul className="space-y-1">
+                                  {p.tips.map((t, j) => (
+                                    <li key={j} className="text-xs text-zinc-600 flex items-start gap-2"><div className="w-1 h-1 rounded-full bg-amber-400 mt-1.5 shrink-0" />{t}</li>
+                                  ))}
+                                </ul>
+                                <p className="text-xs text-zinc-400 italic">{p.note}</p>
                               </div>
                             </div>
                           ))}

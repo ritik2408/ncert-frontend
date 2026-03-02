@@ -18,3 +18,80 @@ body {
 .markdown-body p {
   @apply mb-4 leading-relaxed;
 }
+
+/* ─── Exemplar HTML content prose ─────────────────────────────────────────── */
+.exemplar-prose {
+  @apply text-zinc-700 leading-relaxed;
+}
+
+.exemplar-prose p {
+  @apply mb-4 text-sm leading-7;
+}
+
+.exemplar-prose h2 {
+  @apply text-lg font-bold text-zinc-900 mt-10 mb-4 pb-2 border-b border-amber-200;
+}
+
+.exemplar-prose h3 {
+  @apply text-base font-bold text-amber-700 mt-6 mb-3;
+}
+
+.exemplar-prose ul {
+  @apply list-disc list-outside ml-5 mb-4 space-y-2;
+}
+
+.exemplar-prose ol {
+  @apply list-decimal list-outside ml-5 mb-4 space-y-4;
+}
+
+.exemplar-prose ul li,
+.exemplar-prose ol li {
+  @apply text-sm text-zinc-700 leading-6 pl-1;
+}
+
+.exemplar-prose ul ul {
+  @apply mt-2 ml-4 list-[circle];
+}
+
+.exemplar-prose strong {
+  @apply font-semibold text-zinc-900;
+}
+
+.exemplar-prose i,
+.exemplar-prose em {
+  @apply italic text-zinc-600;
+}
+
+/* Tables */
+.exemplar-prose table {
+  @apply w-full border-collapse rounded-2xl overflow-hidden my-6 text-sm shadow-sm;
+}
+
+.exemplar-prose thead {
+  @apply bg-amber-50;
+}
+
+.exemplar-prose th {
+  @apply text-left px-4 py-3 font-semibold text-amber-800 border border-amber-100 text-xs uppercase tracking-wide;
+}
+
+.exemplar-prose td {
+  @apply px-4 py-3 border border-zinc-100 text-zinc-700 align-top;
+}
+
+.exemplar-prose tr:nth-child(even) td {
+  @apply bg-zinc-50;
+}
+
+.exemplar-prose tr:hover td {
+  @apply bg-amber-50/40;
+}
+
+/* Answer blocks */
+.exemplar-prose .exemplar-answer {
+  @apply mt-2 mb-1 bg-amber-50 border-l-4 border-amber-400 rounded-r-xl px-4 py-3;
+}
+
+.exemplar-prose .exemplar-answer p {
+  @apply mb-0 text-sm text-zinc-700;
+}

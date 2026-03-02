@@ -1,0 +1,176 @@
+﻿<div class="cdcms_section1">
+<p>Class 12 Physics Chapter 1 Electric Charges and Fields will teach you the basic principles of electrostatics. Electric charge is the basic property of matter that causes it to experience a force when it is kept in an electric or a magnetic field. The chapter is included in the unit Electrostatics, which, together with Current Electricity, has a weightage of 17 marks in the CBSE Class 12 Physics Exam.</p>
+
+
+<ul>
+        <li>This <a href="https://collegedunia.com/exams/cbse-class-xii/physics" target="_blank"><b>Class 12 Physics</b></a> Chapter 1 explains electric charges, Coulomb’s law, electric field, electric field lines, and Gauss’s law.</li>
+        <li>Many students find derivations and numerical problems difficult in this chapter.</li>
+        <li>The NCERT solution provides step-by-step explanations to help you understand every concept with confidence.</li>
+</ul>
+
+
+<table class="table table-striped style_table">
+        <tbody>
+                <tr>
+                        <td style="text-align: center;"><a href="https://assets.collegedunia.com/public/image/33c21da95fcd4c7d546c6a367c8434cf.pdf" target="_blank"><b>Download Physics Chapter 1 NCERT Solution</b></a></td>
+                </tr>
+        </tbody>
+</table>
+
+
+<p><b><span style="color:#FF0000;">Also Check:</span> </b><a href="https://collegedunia.com/exams/cbse-class-xii/physics-question-paper" target="_blank"><b>CBSE Class 12 Physics Question Paper with Solution (2026-2015): Download PDF</b></a></p>
+
+
+<div style="background: #eee; border: 1px solid #ccc; padding: 5px 10px;"><strong>Table of Contents</strong>
+
+
+<ol style="margin-bottom: 0px;" type="1">
+        <li><a href="#1">NCERT Solutions for Class 12 Physics Chapter 1</a>
+
+
+        <ul style="margin-bottom: 0px;" type="none">
+        </ul>
+        </li>
+        <li><a href="#2">Physics Chapter 1 NCERT Related Articles</a>
+        <ul style="margin-bottom: 0px;" type="none">
+        </ul>
+        </li>
+        <li><a href="#3">Physics Chapter 1 NCERT: Important Topics of Electric Charges and Fields</a>
+        <ul style="margin-bottom: 0px;" type="none">
+        </ul>
+        </li>
+        <li><a href="#4">Class 12 Physics NCERT Solutions for Chapter 1 – Electric Charges and Fields Important Questions</a>
+        <ul style="margin-bottom: 0px;" type="none">
+        </ul>
+        </li>
+</ol>
+</div>
+</div>
+
+
+<div class="cdcms_section2">
+<h2 id="1">NCERT Solutions for Class 12 Physics Chapter 1</h2>
+
+
+<p>The NCERT Solutions for class 12 physics chapter 1 Electric Charges and Fields are as given below</p>
+</div>
+
+
+<div class="cdcms_section3">
+<h2 id="2">Physics Chapter 1 NCERT Related Articles</h2>
+
+
+<p>We have provided some chapters and important articles of Physics Chapter 1 here for you to check.</p>
+
+
+<table class="table table-striped style_table">
+        <tbody>
+                <tr>
+                        <td><a href="https://collegedunia.com/exams/applications-of-gausss-law-overview-formula-and-derivations-physics-articleid-10" target="_blank"><b>Applications of Gauss’s Law</b></a></td>
+                        <td><a href="https://collegedunia.com/exams/charging-by-induction-definition-charged-objects-and-sample-questions-physics-articleid-869" target="_blank"><b>Charging by Induction</b></a></td>
+                </tr>
+                <tr>
+                        <td><a href="https://collegedunia.com/exams/class-12-physics-chapter-1-electric-dipole-articleid-16" target="_blank"><b>Electric Dipole</b></a></td>
+                        <td><a href="https://collegedunia.com/exams/dipole-in-a-uniform-external-field-torque-and-its-calculation-physics-articleid-15" target="_blank"><b>Dipole in a Uniform External Field</b></a></td>
+                </tr>
+                <tr>
+                        <td><a href="https://collegedunia.com/exams/maxwells-equations-deriving-equations-differential-form-physics-articleid-574" target="_blank"><b>Maxwell’s Equations</b></a></td>
+                        <td><a href="https://collegedunia.com/exams/kirchhoffs-laws-kirchhoffs-current-and-voltage-laws-and-applications-physics-articleid-26" target="_blank"><b>Kirchhoffs Laws</b></a></td>
+                </tr>
+                <tr>
+                        <td><a href="https://collegedunia.com/exams/cells-emf-and-internal-resistance-introduction-and-equations-physics-articleid-30" target="_blank"><b>Cells, EMF and Internal Resistance</b></a></td>
+                        <td><a href="https://collegedunia.com/exams/electrostatics-coulombs-law-electric-field-electrostatic-pressure-physics-articleid-3841" target="_blank"><b>Electrostatics</b></a></td>
+                </tr>
+                <tr>
+                        <td><a href="https://collegedunia.com/exams/electric-field-definition-formula-calculation-physics-articleid-2259" target="_blank"><b>Unit of Electric Field</b></a></td>
+                        <td><a href="https://collegedunia.com/exams/electric-charge-definition-formula-types-and-properties-physics-articleid-12" target="_blank"><b>Electric Charges</b></a></td>
+                </tr>
+                <tr>
+                        <td><a href="https://collegedunia.com/exams/conservation-of-charge-definition-formula-examples-articleid-3095" target="_blank"><b>Conservation of Charge</b></a></td>
+                        <td><a href="https://collegedunia.com/exams/electric-flux-definition-formula-symbol-and-applications-physics-articleid-17" target="_blank"><b>Electric flux</b></a></td>
+                </tr>
+                <tr>
+                        <td><a href="https://collegedunia.com/exams/electric-field-definition-formula-and-electric-field-direction-physics-articleid-13" target="_blank"><b>Electric field</b></a></td>
+                        <td><a href="https://collegedunia.com/exams/electrostatic-potential-and-capacitance-introduction-and-derivation-physics-articleid-24" target="_blank"><b>Electrostatic Potential and Capacitance</b></a></td>
+                </tr>
+        </tbody>
+</table>
+</div>
+
+
+<div class="cdcms_section4">
+<h2 id="3">Physics Chapter 1 NCERT: Important Topics of Electric Charges and Fields</h2>
+
+
+<p>Some of the important topics of Class 12 Physics Chapter 1 are:</p>
+
+
+<p>An electric charge refers to the property of subatomic particles that leads it to experience a force when they are placed in an electric and magnetic field. Electric Charges are of two types – like charges and unlike charges</p>
+
+
+<ol>
+        <li>Like Charges repel each other.</li>
+        <li>Unlike Charges attract each other.</li>
+</ol>
+
+
+<p>An electric charge has 3 fundamental properties: quantization, additive nature, and conservation of electric charge.</p>
+
+
+<table class="table table-striped style_table">
+        <tbody>
+                <tr>
+                        <th>
+                        <ul>
+                                <li>Quantization – The total charge of a body denotes the integral multiple of a basic quantum of charge.</li>
+                                <li>Additive – This property represents the total charge of a body as an algebraic sum of all the singular charges that act on the system.</li>
+                                <li>Conservation – This property expressed that the total charge of a system is not affected with time. Charges can neither be created nor destroyed.</li>
+                        </ul>
+                        </th>
+                </tr>
+        </tbody>
+</table>
+
+
+<ul>
+        <li><a href="https://collegedunia.com/exams/class-12-physics-chapter-1-coulomb-s-law-articleid-11" target="_blank">Coulomb’s law</a> states that mutual electrostatic force that exists between two point charges A and B is directly proportional to their product, AB and inversely proportional to the square of the distance between them.</li>
+</ul>
+
+
+<ul>
+        <li>Electric flux is the total number of electric field lines that pass through a given area in a unit of time.</li>
+        <li>The electric flux Δθ through an area element of ΔS can be denoted by</li>
+        <li>Conductors are the objects that assist in the movement of electric charge. Examples of Conductors – Human bodies, Earth, metal, etc.</li>
+        <li>Insulators offer resistance to the flow of electricity through them. Examples of Insulators – Nylon, Wood, Porcelain, etc.</li>
+        <li>Gauss's law states that the total amount of <a href="https://collegedunia.com/exams/electric-flux-definition-formula-symbol-and-applications-physics-articleid-17" target="_blank">electric flux </a>that passes through a closed surface is directly proportional to the enclosed electric charge. The Gauss law formula is expressed by-</li>
+</ul>
+
+
+<p><b>Check-Out: </b></p>
+
+
+<table class="table table-striped style_table">
+        <tbody>
+                <tr>
+                        <td><a href="https://collegedunia.com/exams/ncert-chapterwise-solutions-for-class-12-physics-articleid-4091" target="_blank"><b>NCERT Solutions for Class 12 Physics</b></a></td>
+                        <td><a href="https://collegedunia.com/exams/cbse-class-xii/physics" target="_blank"><b>Class 12 Physics Notes</b></a></td>
+                        <td><a href="https://collegedunia.com/exams/physics-formulas-notes-and-examples-articleid-4112" target="_blank"><b>Formulas in Physics</b></a></td>
+                </tr>
+                <tr>
+                        <td><a href="https://collegedunia.com/exams/difference-between-in-physics-articleid-4821" target="_blank"><b>Topics for Comparison in Physics</b></a></td>
+                        <td><a href="https://collegedunia.com/exams/physics-mcqs-answers-with-explanations-articleid-6330" target="_blank"><b>Choice-based questions in physics</b></a></td>
+                        <td><a href="https://collegedunia.com/exams/relation-between-articles-physics-articleid-4832" target="_blank"><b>Topics in relation to physics</b></a></td>
+                </tr>
+                <tr>
+                        <td><a href="https://collegedunia.com/exams/physics-laws-formulas-derivations-study-guides-notes-articleid-4565" target="_blank"><b>Physics Study Notes</b></a></td>
+                        <td><a href="https://collegedunia.com/exams/ncert-class-12-physics-book-pdf-articleid-6458" target="_blank"><b>Class 12 Physics Book PDF</b></a></td>
+                        <td><a href="https://collegedunia.com/exams/cbse-class-xii/physics-practical" target="_blank"><b>Class 12 Physics Practicals</b></a></td>
+                </tr>
+        </tbody>
+</table>
+</div>
+
+
+<div class="cdcms_section5">
+<h2 id="4"></h2>
+</div>

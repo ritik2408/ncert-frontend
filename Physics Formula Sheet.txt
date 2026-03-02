@@ -1,0 +1,703 @@
+﻿<p>Class 12 Physics, <b>carrying 70 marks in theory in the CBSE board exam is a high scoring subject, but it comes with the maximum number of numerical questions. </b></p>
+
+
+<ul>
+        <li>Most questions in units like <b>Electrostatics, Current Electricity, Optics, and Modern Physics are directly formula-based.</b></li>
+        <li><b>Approx 35-35% of the 70 marks theory paper are numericals, which required formula to solve the questions</b></li>
+        <li><b>You can get around 15-20 marks of direct formula application based question in Class 12 Physics. </b></li>
+</ul>
+
+
+<p>So to score well, you need to focus more on understanding and remembering the formula as well as the application of the formula in numericals.</p>
+
+
+<p>As competitive exams like JEE Main and board exams are formula based so, having access to a structured <b>Class 12 Physics Formula sheet </b>is important for quick revision and error-free problem-solving.</p>
+
+
+<p>This page provides chapter-wise Physics Formula Sheets, covering all important equations, constants, and standard results as per the latest CBSE syllabus.</p>
+
+
+<h2>Class 12 Physics : Chapter Wise Formula Table</h2>
+
+
+<h3><b>Chapter 1: Electric Charges and Fields</b></h3>
+
+
+<table class="table table-striped style_table" style="width: 100%;">
+        <tbody>
+                <tr>
+                        <th><b>Formula Name</b></th>
+                        <th><b>View Formula Sheet</b></th>
+                </tr>
+                <tr>
+                        <td>Electric Field Formula</td>
+                        <td><a href="https://collegedunia.com/exams/electric-field-formula-applications-unit-and-solved-examples-physics-articleid-2913" target="_blank">View Formula Sheet</a></td>
+                </tr>
+                <tr>
+                        <td>Charge Density Formula</td>
+                        <td><a href="https://collegedunia.com/exams/charge-density-formula-applications-solved-examples-physics-articleid-4182" target="_blank">View Formula Sheet</a></td>
+                </tr>
+                <tr>
+                        <td>Surface Charge Density Formula</td>
+                        <td><a href="https://collegedunia.com/exams/surface-charge-density-formula-application-with-solved-solutions-chemistry-articleid-2564" target="_blank">View Formula Sheet</a></td>
+                </tr>
+                <tr>
+                        <td>Force of Attraction Formula</td>
+                        <td><a href="https://collegedunia.com/exams/force-of-attraction-formula-gravity-gravitational-force-constant-examples-physics-articleid-4335" target="_blank">View Formula Sheet</a></td>
+                </tr>
+        </tbody>
+</table>
+
+
+<p><b>Chapter 2: Electrostatic Potential and Capacitance</b></p>
+
+
+<table class="table table-striped style_table" style="width: 100%;">
+        <tbody>
+                <tr>
+                        <th><b>Formula Name</b></th>
+                        <th><b>View Formula Sheet</b></th>
+                </tr>
+                <tr>
+                        <td>Potential Energy Formula</td>
+                        <td><a href="https://collegedunia.com/exams/potential-energy-formula-types-derivation-equation-examples-phyiscs-articleid-2445" target="_blank">View Formula Sheet</a></td>
+                </tr>
+                <tr>
+                        <td>Capacitance Formula</td>
+                        <td><a href="https://collegedunia.com/exams/capacitance-formula-definition-unit-and-sample-questions-physics-articleid-2292" target="_blank">View Formula Sheet</a></td>
+                </tr>
+                <tr>
+                        <td>Capacitors in Parallel Formula</td>
+                        <td><a href="https://collegedunia.com/exams/capacitors-in-parallel-formula-applications-and-important-questions-physics-articleid-928" target="_blank">View Formula Sheet</a></td>
+                </tr>
+                <tr>
+                        <td>Voltage Divider Formula</td>
+                        <td><a href="https://collegedunia.com/exams/voltage-divider-formula-resistive-voltage-divider-applications-questions-articleid-4427" target="_blank">View Formula Sheet</a></td>
+                </tr>
+                <tr>
+                        <td>Energy Density Formula</td>
+                        <td><a href="https://collegedunia.com/exams/energy-density-formula-definition-and-solved-exam-physics-articleid-4034" target="_blank">View Formula Sheet</a></td>
+                </tr>
+        </tbody>
+</table>
+
+
+<h3><b>Chapter 3: Current Electricity</b></h3>
+
+
+<table class="table table-striped style_table" style="width: 100%;">
+        <tbody>
+                <tr>
+                        <th><b>Formula Name</b></th>
+                        <th><b>View Formula Sheet</b></th>
+                </tr>
+                <tr>
+                        <td>Electrical Current Formula</td>
+                        <td><a href="https://collegedunia.com/exams/electrical-current-definition-types-effects-unit-and-measurement-physics-articleid-1200" target="_blank">View Formula Sheet</a></td>
+                </tr>
+                <tr>
+                        <td>Drift Velocity Formula</td>
+                        <td><a href="https://collegedunia.com/exams/drift-velocity-types-calculation-relation-and-sample-questions-physics-articleid-936" target="_blank">View Formula Sheet</a></td>
+                </tr>
+                <tr>
+                        <td>Current Density Formula</td>
+                        <td><a href="https://collegedunia.com/exams/current-density-formula-symbol-unit-physics-articleid-3584" target="_blank">View Formula Sheet</a></td>
+                </tr>
+                <tr>
+                        <td>Resistance Formula</td>
+                        <td><a href="https://collegedunia.com/exams/resistance-formula-concept-example-physics-articleid-2137" target="_blank">View Formula Sheet</a></td>
+                </tr>
+                <tr>
+                        <td>Resistivity Formula</td>
+                        <td><a href="https://collegedunia.com/exams/resistivity-formula-and-solved-examples-physics-articleid-2135" target="_blank">View Formula Sheet</a></td>
+                </tr>
+                <tr>
+                        <td>EMF Formula</td>
+                        <td><a href="https://collegedunia.com/exams/emf-formula-equation-explanation-and-solved-examples-physics-articleid-2912" target="_blank">View Formula Sheet</a></td>
+                </tr>
+                <tr>
+                        <td>Internal Resistance Formula</td>
+                        <td><a href="https://collegedunia.com/exams/internal-resistance-formula-and-examples-physics-articleid-3072" target="_blank">View Formula Sheet</a></td>
+                </tr>
+                <tr>
+                        <td>Electric Circuit Formula</td>
+                        <td><a href="https://collegedunia.com/exams/electric-circuit-definition-formula-symbols-articleid-3813#Ele" target="_blank">View Formula Sheet</a></td>
+                </tr>
+                <tr>
+                        <td>Electric Power Formula</td>
+                        <td><a href="https://collegedunia.com/exams/electric-power-formula-derivation-power-energy-formula-physics-articleid-2139" target="_blank">View Formula Sheet</a></td>
+                </tr>
+                <tr>
+                        <td>Time Constant Formula</td>
+                        <td><a href="https://collegedunia.com/exams/time-constant-formula-voltage-capacitor-and-solved-examples-physics-articleid-4327" target="_blank">View Formula Sheet</a></td>
+                </tr>
+        </tbody>
+</table>
+
+
+<h3><b>Chapter 4: Moving Charges and Magnetism</b></h3>
+
+
+<table class="table table-striped style_table" style="width: 100%;">
+        <tbody>
+                <tr>
+                        <th><b>Formula Name</b></th>
+                        <th><b>View Formula Sheet</b></th>
+                </tr>
+                <tr>
+                        <td>Magnetic Induction Formula</td>
+                        <td><a href="https://collegedunia.com/exams/magnetic-induction-formula-faradays-law-of-induction-physics-articleid-2439" target="_blank">View Formula Sheet</a></td>
+                </tr>
+                <tr>
+                        <td>Magnetic Flux Formula</td>
+                        <td><a href="https://collegedunia.com/exams/magnetic-flux-formula-density-examples-measurement-sample-questions-physics-articleid-3976" target="_blank">View Formula Sheet</a></td>
+                </tr>
+                <tr>
+                        <td>Magnetic Field in a Solenoid Formula</td>
+                        <td><a href="https://collegedunia.com/exams/magnetic-field-in-a-solenoid-formula-solved-examples-physics-articleid-2027" target="_blank">View Formula Sheet</a></td>
+                </tr>
+                <tr>
+                        <td>Torque Formula</td>
+                        <td><a href="https://collegedunia.com/exams/torque-formula-definition-solved-examples-physics-articleid-2131" target="_blank">View Formula Sheet</a></td>
+                </tr>
+                <tr>
+                        <td>Magnetism Formula</td>
+                        <td><a href="https://collegedunia.com/exams/magnetism-formula-magnetic-field-and-biot-savart-law-articleid-4348" target="_blank">View Formula Sheet</a></td>
+                </tr>
+        </tbody>
+</table>
+
+
+<p><b>Chapter 5: Magnetism and Matter</b></p>
+
+
+<table class="table table-striped style_table" style="width: 100%;">
+        <tbody>
+                <tr>
+                        <th><b>Formula Name</b></th>
+                        <th><b>View Formula Sheet</b></th>
+                </tr>
+                <tr>
+                        <td>Magnetism Formula</td>
+                        <td><a href="https://collegedunia.com/exams/magnetism-formula-magnetic-field-and-biot-savart-law-articleid-4348" target="_blank">View Formula Sheet</a></td>
+                </tr>
+                <tr>
+                        <td>Angular Momentum Formula</td>
+                        <td><a href="https://collegedunia.com/exams/angular-momentum-definition-formula-and-example-physics-articleid-1020" target="_blank">View Formula Sheet</a></td>
+                </tr>
+        </tbody>
+</table>
+
+
+<h3><b>Chapter 6: Electromagnetic Induction</b></h3>
+
+
+<table class="table table-striped style_table" style="width: 100%;">
+        <tbody>
+                <tr>
+                        <th><b>Formula Name</b></th>
+                        <th><b>View Formula Sheet</b></th>
+                </tr>
+                <tr>
+                        <td>Inductance Formula</td>
+                        <td><a href="https://collegedunia.com/exams/inductance-formula-unit-types-and-sample-questions-physics-articleid-2476" target="_blank">View Formula Sheet</a></td>
+                </tr>
+                <tr>
+                        <td>EMF Formula</td>
+                        <td><a href="https://collegedunia.com/exams/emf-formula-equation-explanation-and-solved-examples-physics-articleid-2912" target="_blank">View Formula Sheet</a></td>
+                </tr>
+        </tbody>
+</table>
+
+
+<h3><b>Chapter 7: Alternating Current</b></h3>
+
+
+<table class="table table-striped style_table" style="width: 100%;">
+        <tbody>
+                <tr>
+                        <th><b>Formula Name</b></th>
+                        <th><b>View Formula Sheet</b></th>
+                </tr>
+                <tr>
+                        <td>Capacitive Reactance Formula</td>
+                        <td><a href="https://collegedunia.com/exams/capacitive-reactance-formula-si-unit-and-frequency-physics-articleid-2448" target="_blank">View Formula Sheet</a></td>
+                </tr>
+                <tr>
+                        <td>Resonant Frequency Formula</td>
+                        <td><a href="https://collegedunia.com/exams/resonant-frequency-formula-series-and-parallel-resonance-examples-articleid-4137" target="_blank">View Formula Sheet</a></td>
+                </tr>
+                <tr>
+                        <td>Transformer Formula</td>
+                        <td><a href="https://collegedunia.com/exams/transformer-formula-definition-types-principle-physics-articleid-2350" target="_blank">View Formula Sheet</a></td>
+                </tr>
+        </tbody>
+</table>
+
+
+<h3><b>Chapter 8: Electromagnetic Waves</b></h3>
+
+
+<table class="table table-striped style_table" style="width: 100%;">
+        <tbody>
+                <tr>
+                        <th><b>Formula Name</b></th>
+                        <th><b>View Formula Sheet</b></th>
+                </tr>
+                <tr>
+                        <td>Wave Speed Formula</td>
+                        <td><a href="https://collegedunia.com/exams/wave-speed-formula-meaning-properties-and-examples-physics-articleid-6463" target="_blank">View Formula Sheet</a></td>
+                </tr>
+                <tr>
+                        <td>Wavelength Formula</td>
+                        <td><a href="https://collegedunia.com/exams/wavelength-formula-derivation-wiens-law-energy-photon-physics-articleid-1401" target="_blank">View Formula Sheet</a></td>
+                </tr>
+                <tr>
+                        <td>Wavelength to Frequency Formula</td>
+                        <td><a href="https://collegedunia.com/exams/wavelength-to-frequency-formula-with-solved-examples-physics-articleid-3885" target="_blank">View Formula Sheet</a></td>
+                </tr>
+                <tr>
+                        <td>Intensity Formula</td>
+                        <td><a href="https://collegedunia.com/exams/intensity-formula-sound-and-wave-intensity-solved-examples-physics-articleid-2890" target="_blank">View Formula Sheet</a></td>
+                </tr>
+        </tbody>
+</table>
+
+
+<h3><b>Chapter 9: Ray Optics and Optical Instruments</b></h3>
+
+
+<table class="table table-striped style_table" style="width: 100%;">
+        <tbody>
+                <tr>
+                        <th><b>Formula Name</b></th>
+                        <th><b>View Formula Sheet</b></th>
+                </tr>
+                <tr>
+                        <td>Mirror Formula</td>
+                        <td><a href="https://collegedunia.com/exams/mirror-formula-equation-applications-and-sample-questions-physics-articleid-967" target="_blank">View Formula Sheet</a></td>
+                </tr>
+                <tr>
+                        <td>Derivation of Mirror Formula</td>
+                        <td><a href="https://collegedunia.com/exams/mirror-formula-derivation-definition-and-applications-physics-articleid-2417" target="_blank">View Formula Sheet</a></td>
+                </tr>
+                <tr>
+                        <td>Derivation of Prism Formula</td>
+                        <td><a href="https://collegedunia.com/exams/prism-formula-definition-types-formula-and-derivation-physics-articleid-2479" target="_blank">View Formula Sheet</a></td>
+                </tr>
+                <tr>
+                        <td>Refractive Index Formula</td>
+                        <td><a href="https://collegedunia.com/exams/refractive-index-formula-snells-law-of-refraction-physics-articleid-2941" target="_blank">View Formula Sheet</a></td>
+                </tr>
+                <tr>
+                        <td>Critical Angle Formula</td>
+                        <td><a href="https://collegedunia.com/exams/critical-angle-formula-total-internal-reflection-and-examples-physics-articleid-1436" target="_blank">View Formula Sheet</a></td>
+                </tr>
+                <tr>
+                        <td>Brewster’s Law Formula</td>
+                        <td><a href="https://collegedunia.com/exams/brewsters-law-explanation-formula-derivation-physics-articleid-4116#b" target="_blank">View Formula Sheet</a></td>
+                </tr>
+        </tbody>
+</table>
+
+
+<h3><b>Chapter 10: Wave Optics</b></h3>
+
+
+<table class="table table-striped style_table" style="width: 100%;">
+        <tbody>
+                <tr>
+                        <th><b>Formula Name</b></th>
+                        <th><b>View Formula Sheet</b></th>
+                </tr>
+                <tr>
+                        <td>Doppler Effect Formula</td>
+                        <td><a href="https://collegedunia.com/exams/doppler-effect-formula-equations-and-solved-questions-physics-articleid-1329" target="_blank">View Formula Sheet</a></td>
+                </tr>
+                <tr>
+                        <td>Amplitude Formula</td>
+                        <td><a href="https://collegedunia.com/exams/amplitude-formula-types-of-amplitude-and-solved-examples-physics-articleid-2106" target="_blank">View Formula Sheet</a></td>
+                </tr>
+                <tr>
+                        <td>Longitudinal Waves Formula</td>
+                        <td><a href="https://collegedunia.com/exams/longitudinal-waves-definition-formula-types-and-example-physics-articleid-984" target="_blank">View Formula Sheet</a></td>
+                </tr>
+                <tr>
+                        <td>Wave Energy Formula</td>
+                        <td><a href="https://collegedunia.com/exams/wave-energy-formula-derivation-advantages-disadvantages-physics-articleid-4767" target="_blank">View Formula Sheet</a></td>
+                </tr>
+                <tr>
+                        <td>Speed of Sound Formula</td>
+                        <td><a href="https://collegedunia.com/exams/speed-of-sound-formula-solids-liquids-gases-physics-articleid-2374" target="_blank">View Formula Sheet</a></td>
+                </tr>
+                <tr>
+                        <td>Beat Frequency Formula</td>
+                        <td><a href="https://collegedunia.com/exams/beat-frequency-articleid-4211" target="_blank">View Formula Sheet</a></td>
+                </tr>
+        </tbody>
+</table>
+
+
+<p><b>Chapter 11: Dual Nature of Radiation and Matter</b></p>
+
+
+<table class="table table-striped style_table" style="width: 100%;">
+        <tbody>
+                <tr>
+                        <th><b>Formula Name</b></th>
+                        <th><b>View Formula Sheet</b></th>
+                </tr>
+                <tr>
+                        <td>De Broglie Wavelength Formula</td>
+                        <td><a href="https://collegedunia.com/exams/de-broglie-wavelength-formula-equation-and-derivation-chemistry-articleid-2906" target="_blank">View Formula Sheet</a></td>
+                </tr>
+                <tr>
+                        <td>Energy Level Formula</td>
+                        <td><a href="https://collegedunia.com/exams/energy-level-formula-solved-examples-physics-articleid-4256" target="_blank">View Formula Sheet</a></td>
+                </tr>
+                <tr>
+                        <td>Relativistic Mass Formula</td>
+                        <td><a href="https://collegedunia.com/exams/relativistic-mass-formula-with-solve-examples-physics-articleid-4476" target="_blank">View Formula Sheet</a></td>
+                </tr>
+                <tr>
+                        <td>Time Dilation Formula</td>
+                        <td><a href="https://collegedunia.com/exams/time-dilation-formula-formula-solved-examples-physics-articleid-4609" target="_blank">View Formula Sheet</a></td>
+                </tr>
+                <tr>
+                        <td>Rest Mass of Electron Formula</td>
+                        <td><a href="https://collegedunia.com/exams/electron-mass-definition-rest-mass-of-electron-formula-and-derivation-physics-articleid-1199" target="_blank">View Formula Sheet</a></td>
+                </tr>
+        </tbody>
+</table>
+
+
+<h3><b>Chapter 12: Atoms</b></h3>
+
+
+<table class="table table-striped style_table" style="width: 100%;">
+        <tbody>
+                <tr>
+                        <th><b>Formula Name</b></th>
+                        <th><b>View Formula Sheet</b></th>
+                </tr>
+                <tr>
+                        <td>Bohr Radius Formula</td>
+                        <td><a href="https://collegedunia.com/exams/bohr-radius-explanation-formula-equation-units-physics-articleid-976" target="_blank">View Formula Sheet</a></td>
+                </tr>
+                <tr>
+                        <td>Energy Level Formula</td>
+                        <td><a href="https://collegedunia.com/exams/energy-level-formula-solved-examples-physics-articleid-4256" target="_blank">View Formula Sheet</a></td>
+                </tr>
+        </tbody>
+</table>
+
+
+<h3><b>Chapter 13: Nuclei</b></h3>
+
+
+<table class="table table-striped style_table" style="width: 100%;">
+        <tbody>
+                <tr>
+                        <th><b>Formula Name</b></th>
+                        <th><b>View Formula Sheet</b></th>
+                </tr>
+                <tr>
+                        <td>Binding Energy Formula</td>
+                        <td><a href="https://collegedunia.com/exams/binding-energy-formula-mass-defect-solved-examples-physics-articleid-1293" target="_blank">View Formula Sheet</a></td>
+                </tr>
+                <tr>
+                        <td>Radioactive Decay Formula</td>
+                        <td><a href="https://collegedunia.com/exams/radioactive-decay-formula-types-law-mass-defect-physics-articleid-2455" target="_blank">View Formula Sheet</a></td>
+                </tr>
+                <tr>
+                        <td>Lattice Energy Formula</td>
+                        <td><a href="https://collegedunia.com/exams/lattice-energy-formula-solved-examples-physics-articleid-4249" target="_blank">View Formula Sheet</a></td>
+                </tr>
+        </tbody>
+</table>
+
+
+<h3><b>Chapter 14: Semiconductor Electronics</b></h3>
+
+
+<table class="table table-striped style_table" style="width: 100%;">
+        <tbody>
+                <tr>
+                        <th><b>Formula Name</b></th>
+                        <th><b>View Formula Sheet</b></th>
+                </tr>
+                <tr>
+                        <td>Semiconductor Formula</td>
+                        <td><a href="https://collegedunia.com/exams/semiconductor-formula-explanation-examples-physics-articleid-4341" target="_blank">View Formula Sheet</a></td>
+                </tr>
+                <tr>
+                        <td>Electrical Formula</td>
+                        <td><a href="https://collegedunia.com/exams/electrical-formulas-electric-field-potential-difference-electrical-charge-science-articleid-1422" target="_blank">View Formula Sheet</a></td>
+                </tr>
+                <tr>
+                        <td>Electric Power Formula</td>
+                        <td><a href="https://collegedunia.com/exams/electric-power-formula-derivation-power-energy-formula-physics-articleid-2139" target="_blank">View Formula Sheet</a></td>
+                </tr>
+        </tbody>
+</table>
+
+
+<h2><b>Class 12 Physics Basic Formulas</b></h2>
+
+
+<ul>
+        <li><b>Class 12 Physics Basic Formulas i</b>nclude important equations from <b>Electrostatics, Current Electricity, Magnetism, Optics, and Modern Physics. </b></li>
+        <li>These formulas help students solve numerical problems in board exams and understand core concepts easily.</li>
+        <li>Learning and revising these basic formulas regularly is essential for scoring well in Class 12 Physics.</li>
+</ul>
+
+
+<h3><b>Electrostatics</b></h3>
+
+
+<table class="table table-striped style_table" style="width: 100%;">
+        <tbody>
+                <tr>
+                        <th><b>Formula Name</b></th>
+                        <th><b>Formula</b></th>
+                </tr>
+                <tr>
+                        <td>Coulomb’s Law</td>
+                        <td>F = kq₁q₂ / r²</td>
+                </tr>
+                <tr>
+                        <td>Electric Field</td>
+                        <td>E = F/q</td>
+                </tr>
+                <tr>
+                        <td>Electric Potential</td>
+                        <td>V = W/q</td>
+                </tr>
+                <tr>
+                        <td>Capacitance</td>
+                        <td>C = Q/V</td>
+                </tr>
+                <tr>
+                        <td>Energy Stored in Capacitor</td>
+                        <td>U = ½CV²</td>
+                </tr>
+                <tr>
+                        <td>Capacitors in Parallel</td>
+                        <td>C = C₁ + C₂</td>
+                </tr>
+                <tr>
+                        <td>Capacitors in Series</td>
+                        <td>1/C = 1/C₁ + 1/C₂</td>
+                </tr>
+        </tbody>
+</table>
+
+
+<h3><b>Current Electricity</b></h3>
+
+
+<table class="table table-striped style_table" style="width: 100%;">
+        <tbody>
+                <tr>
+                        <th><b>Formula Name</b></th>
+                        <th><b>Formula</b></th>
+                </tr>
+                <tr>
+                        <td>Ohm’s Law</td>
+                        <td>V = IR</td>
+                </tr>
+                <tr>
+                        <td>Resistance</td>
+                        <td>R = ρL/A</td>
+                </tr>
+                <tr>
+                        <td>Electric Power</td>
+                        <td>P = VI</td>
+                </tr>
+                <tr>
+                        <td>Electrical Energy</td>
+                        <td>E = Pt</td>
+                </tr>
+                <tr>
+                        <td>Drift Velocity</td>
+                        <td>v = I / (nqA)</td>
+                </tr>
+                <tr>
+                        <td>EMF</td>
+                        <td>ε = V + Ir</td>
+                </tr>
+        </tbody>
+</table>
+
+
+<h3><b>Magnetism &amp; Moving Charges</b></h3>
+
+
+<table class="table table-striped style_table" style="width: 100%;">
+        <tbody>
+                <tr>
+                        <th><b>Formula Name</b></th>
+                        <th><b>Formula</b></th>
+                </tr>
+                <tr>
+                        <td>Magnetic Force</td>
+                        <td>F = qvB sinθ</td>
+                </tr>
+                <tr>
+                        <td>Force on Current</td>
+                        <td>F = BIL sinθ</td>
+                </tr>
+                <tr>
+                        <td>Magnetic Field (Solenoid)</td>
+                        <td>B = μ₀ n I</td>
+                </tr>
+                <tr>
+                        <td>Lorentz Force</td>
+                        <td>F = q(E + v × B)</td>
+                </tr>
+        </tbody>
+</table>
+
+
+<h3><b>Electromagnetic Induction</b></h3>
+
+
+<table class="table table-striped style_table" style="width: 100%;">
+        <tbody>
+                <tr>
+                        <th><b>Formula Name</b></th>
+                        <th><b>Formula</b></th>
+                </tr>
+                <tr>
+                        <td>Faraday’s Law</td>
+                        <td>ε = − dΦ/dt</td>
+                </tr>
+                <tr>
+                        <td>Magnetic Flux</td>
+                        <td>Φ = BA cosθ</td>
+                </tr>
+                <tr>
+                        <td>Inductance</td>
+                        <td>V = L (di/dt)</td>
+                </tr>
+        </tbody>
+</table>
+
+
+<h3><b>Alternating Current</b></h3>
+
+
+<table class="table table-striped style_table" style="width: 100%;">
+        <tbody>
+                <tr>
+                        <th><b>Formula Name</b></th>
+                        <th><b>Formula</b></th>
+                </tr>
+                <tr>
+                        <td>RMS Voltage</td>
+                        <td>V₍rms₎ = V₀/√2</td>
+                </tr>
+                <tr>
+                        <td>Reactance</td>
+                        <td>Xₗ = ωL, Xc = 1/ωC</td>
+                </tr>
+                <tr>
+                        <td>Impedance</td>
+                        <td>Z = √(R² + (Xₗ − Xc)²)</td>
+                </tr>
+        </tbody>
+</table>
+
+
+<h3><b>Ray Optics</b></h3>
+
+
+<table class="table table-striped style_table" style="width: 100%;">
+        <tbody>
+                <tr>
+                        <th><b>Formula Name</b></th>
+                        <th><b>Formula</b></th>
+                </tr>
+                <tr>
+                        <td>Mirror Formula</td>
+                        <td>1/f = 1/v + 1/u</td>
+                </tr>
+                <tr>
+                        <td>Lens Formula</td>
+                        <td>1/f = 1/v − 1/u</td>
+                </tr>
+                <tr>
+                        <td>Magnification</td>
+                        <td>m = v/u</td>
+                </tr>
+                <tr>
+                        <td>Snell’s Law</td>
+                        <td>n₁ sinθ₁ = n₂ sinθ₂</td>
+                </tr>
+        </tbody>
+</table>
+
+
+<h3><b>Wave Optics</b></h3>
+
+
+<table class="table table-striped style_table" style="width: 100%;">
+        <tbody>
+                <tr>
+                        <th><b>Formula Name</b></th>
+                        <th><b>Formula</b></th>
+                </tr>
+                <tr>
+                        <td>Wave Speed</td>
+                        <td>v = fλ</td>
+                </tr>
+                <tr>
+                        <td>Young’s Double Slit</td>
+                        <td>β = λD/d</td>
+                </tr>
+        </tbody>
+</table>
+
+
+<h3><b>Modern Physics</b></h3>
+
+
+<table class="table table-striped style_table" style="width: 100%;">
+        <tbody>
+                <tr>
+                        <td><b>Formula Name</b></td>
+                        <td><b>Formula</b></td>
+                </tr>
+                <tr>
+                        <td>Photoelectric Equation</td>
+                        <td>E = hf − φ</td>
+                </tr>
+                <tr>
+                        <td>De Broglie Wavelength</td>
+                        <td>λ = h/p</td>
+                </tr>
+                <tr>
+                        <td>Radioactive Decay</td>
+                        <td>N = N₀ e^(−λt)</td>
+                </tr>
+                <tr>
+                        <td>Energy Mass Relation</td>
+                        <td>E = mc²</td>
+                </tr>
+                <tr>
+                        <td>Binding Energy</td>
+                        <td>Δm c²</td>
+                </tr>
+        </tbody>
+</table>
+
+
+<h2><b>How to Use Class 12 Physics Formula Sheet Effectively?</b></h2>
+
+
+<ul>
+        <li>Revise formulas daily for 15–20 minutes to improve recall speed.</li>
+        <li>Practice numerical questions immediately after revising formulas.</li>
+        <li>Highlight frequently used formulas from high-weightage chapters like Optics and Electrostatics.</li>
+        <li>Use formula sheets for quick revision one day before the board exam.</li>
+</ul>
