@@ -295,12 +295,12 @@ export default function ChapterResourceDetail() {
                             {meta.icon}
                             {meta.tagline} — {meta.label}
                         </span>
-                        <h1 className="text-4xl md:text-5xl font-serif font-bold text-zinc-900 leading-tight">
-                            {chapter.title}
+                        <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-zinc-900 leading-tight">
+                            {(resourceType && chapter.resourceOverrides?.[resourceType]?.title) || chapter.title}
                         </h1>
                     </div>
                     <p className="text-lg text-zinc-600 max-w-3xl leading-relaxed">
-                        {chapter.description}
+                        {(resourceType && chapter.resourceOverrides?.[resourceType]?.description) || chapter.description}
                     </p>
 
 

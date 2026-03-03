@@ -20,7 +20,9 @@ import {
   LayoutGrid,
   ChevronsLeft,
   ChevronsRight,
-  X
+  X,
+  ExternalLink,
+  Target
 } from 'lucide-react';
 import { chapters } from '../data/chapters';
 import { Document, Page, pdfjs } from 'react-pdf';
@@ -245,12 +247,12 @@ export default function ChapterDetail() {
         <section className="space-y-6">
           <div className="space-y-2">
             <span className="text-emerald-600 font-semibold text-sm uppercase tracking-wider">NCERT Class 12 Physics</span>
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-zinc-900 leading-tight">
-              {chapter.title}
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-zinc-900 leading-tight">
+              {chapter.resourceOverrides?.solutions?.title || chapter.title}
             </h2>
           </div>
           <p className="text-lg text-zinc-600 max-w-3xl leading-relaxed">
-            {chapter.description}
+            {chapter.resourceOverrides?.solutions?.description || chapter.description}
           </p>
         </section>
 
@@ -261,7 +263,7 @@ export default function ChapterDetail() {
               <div className="flex items-center justify-between border-b border-zinc-200 pb-4">
                 <div className="flex items-center gap-2">
                   <FileText className="text-emerald-600 w-5 h-5" />
-                  <h3 className="text-xl font-bold text-zinc-800">Interactive Book Viewer</h3>
+                  <h3 className="text-xl font-bold text-zinc-800">Interactive PDF Viewer</h3>
                 </div>
                 <a
                   href={chapter.pdfUrl}
@@ -549,24 +551,50 @@ export default function ChapterDetail() {
                 <h3 className="text-xl font-bold text-zinc-800">Core Concepts</h3>
               </div>
               <div className="grid md:grid-cols-2 gap-6">
-                {chapter.studyGuide.map((item, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.1 }}
-                    className="bg-white p-6 rounded-2xl border border-zinc-200 shadow-sm hover:shadow-md transition-shadow"
-                  >
-                    <h4 className="font-bold text-zinc-900 mb-2 flex items-center gap-2">
-                      <span className="w-6 h-6 bg-zinc-100 rounded-full flex items-center justify-center text-xs text-zinc-500">0{index + 1}</span>
-                      {item.topic}
-                    </h4>
-                    <p className="text-zinc-600 text-sm leading-relaxed">
-                      {item.content}
-                    </p>
-                  </motion.div>
-                ))}
+                {chapter.studyGuide.map((item, index) => {
+                  const colors = [
+                    { bg: 'bg-blue-50', text: 'text-blue-600', hoverBorder: 'hover:border-blue-300', icon: 'text-blue-400 group-hover:text-blue-600' },
+                    { bg: 'bg-purple-50', text: 'text-purple-600', hoverBorder: 'hover:border-purple-300', icon: 'text-purple-400 group-hover:text-purple-600' },
+                    { bg: 'bg-emerald-50', text: 'text-emerald-600', hoverBorder: 'hover:border-emerald-300', icon: 'text-emerald-400 group-hover:text-emerald-600' },
+                    { bg: 'bg-rose-50', text: 'text-rose-600', hoverBorder: 'hover:border-rose-300', icon: 'text-rose-400 group-hover:text-rose-600' },
+                    { bg: 'bg-amber-50', text: 'text-amber-600', hoverBorder: 'hover:border-amber-300', icon: 'text-amber-400 group-hover:text-amber-600' },
+                    { bg: 'bg-indigo-50', text: 'text-indigo-600', hoverBorder: 'hover:border-indigo-300', icon: 'text-indigo-400 group-hover:text-indigo-600' }
+                  ];
+                  const color = colors[index % colors.length];
+
+                  return (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: index * 0.1 }}
+                      className={`bg-white p-6 rounded-2xl border border-zinc-200 shadow-sm hover:shadow-md transition-all ${color.hoverBorder} hover:-translate-y-1`}
+                    >
+                      <h4 className="font-bold text-zinc-900 mb-3 flex items-center gap-3">
+                        <span className={`w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold shrink-0 ${color.bg} ${color.text}`}>
+                          0{index + 1}
+                        </span>
+                        {item.url ? (
+                          <a
+                            href={item.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={`${color.text} hover:underline transition-colors flex items-center gap-1 group`}
+                          >
+                            {item.topic}
+                            <ExternalLink className={`w-3.5 h-3.5 shrink-0 transition-colors ${color.icon}`} />
+                          </a>
+                        ) : (
+                          item.topic
+                        )}
+                      </h4>
+                      <p className="text-zinc-600 text-sm leading-relaxed pl-11">
+                        {item.content}
+                      </p>
+                    </motion.div>
+                  );
+                })}
               </div>
             </section>
 
@@ -636,190 +664,312 @@ export default function ChapterDetail() {
             {chapter.id === 1 && (
               <div className="space-y-8">
 
-                {/* Intro */}
-                <section className="bg-white rounded-[2rem] border border-zinc-200 p-8 space-y-5">
-                  <p className="text-zinc-700 leading-relaxed text-sm">
-                    Class 12 Physics Chapter 1 Electric Charges and Fields will teach you the basic principles of electrostatics. Electric charge is the basic property of matter that causes it to experience a force when it is kept in an electric or a magnetic field. The chapter is included in the unit Electrostatics, which, together with Current Electricity, has a weightage of <strong>17 marks</strong> in the CBSE Class 12 Physics Exam.
-                  </p>
-                  <ul className="space-y-2">
-                    {[
-                      <span key={0}>This Class 12 Physics Chapter 1 explains <strong>electric charges, Coulomb's law, electric field, electric field lines, and Gauss's law.</strong></span>,
-                      'Many students find derivations and numerical problems difficult in this chapter.',
-                      'The NCERT solution provides step-by-step explanations to help you understand every concept with confidence.',
-                    ].map((item, i) => (
-                      <li key={i} className="flex items-start gap-3 text-sm text-zinc-600">
-                        <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 shrink-0" />
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="flex flex-wrap gap-3">
-                    <a href="https://assets.collegedunia.com/public/image/33c21da95fcd4c7d546c6a367c8434cf.pdf" target="_blank" rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-5 py-2.5 bg-emerald-600 text-white text-sm font-bold rounded-2xl hover:bg-emerald-700 transition-colors">
-                      <Download className="w-4 h-4" />
-                      Download Physics Chapter 1 NCERT Solution
-                    </a>
-                  </div>
-                  <div className="flex flex-wrap gap-3 pt-1">
-                    <a href="https://collegedunia.com/exams/cbse-class-xii/physics-question-paper" target="_blank" rel="noopener noreferrer"
-                      className="text-xs font-semibold text-amber-700 bg-amber-50 border border-amber-200 rounded-full px-4 py-1.5 hover:bg-amber-100 transition-colors">
-                      Also Check: CBSE Class 12 Physics Question Paper with Solution (2026–2015): Download PDF →
-                    </a>
-                  </div>
-                </section>
-
-                {/* NCERT Solutions heading */}
-                <section className="bg-white rounded-[2rem] border border-zinc-200 p-8 space-y-3">
-                  <h2 className="text-xl font-bold text-zinc-900 flex items-center gap-2">
-                    <BookOpen className="w-5 h-5 text-emerald-600" />
-                    NCERT Solutions for Class 12 Physics Chapter 1
-                  </h2>
-                  <p className="text-sm text-zinc-600">The NCERT Solutions for class 12 physics chapter 1 Electric Charges and Fields are as given above in the Exercise Solutions section.</p>
-                </section>
-
-                {/* Related Articles */}
-                <section className="bg-white rounded-[2rem] border border-zinc-200 overflow-hidden">
-                  <div className="p-8 pb-4">
-                    <h2 className="text-xl font-bold text-zinc-900 flex items-center gap-2">
-                      <FileText className="w-5 h-5 text-emerald-600" />
-                      Physics Chapter 1 NCERT Related Articles
+                {/* Intro, Mastering & Time Strategy */}
+                <section className="bg-white rounded-[2rem] border border-zinc-200 p-8 space-y-6">
+                  <div className="flex items-center gap-3 border-b border-zinc-100 pb-4">
+                    <div className="p-2 bg-emerald-100 text-emerald-600 rounded-xl">
+                      <BookOpen className="w-6 h-6" />
+                    </div>
+                    <h2 className="text-2xl font-bold tracking-tight text-zinc-900">
+                      How to Master Chapter 1: Electric Charges and Fields
                     </h2>
-                    <p className="text-sm text-zinc-500 mt-2">We have provided some chapters and important articles of Physics Chapter 1 here for you to check.</p>
                   </div>
-                  <table className="w-full text-sm border-t border-zinc-100">
-                    <tbody className="divide-y divide-zinc-100">
-                      {[
-                        [
-                          { label: "Applications of Gauss's Law", url: 'https://collegedunia.com/exams/applications-of-gausss-law-overview-formula-and-derivations-physics-articleid-10' },
-                          { label: 'Charging by Induction', url: 'https://collegedunia.com/exams/charging-by-induction-definition-charged-objects-and-sample-questions-physics-articleid-869' },
-                        ],
-                        [
-                          { label: 'Electric Dipole', url: 'https://collegedunia.com/exams/class-12-physics-chapter-1-electric-dipole-articleid-16' },
-                          { label: 'Dipole in a Uniform External Field', url: 'https://collegedunia.com/exams/dipole-in-a-uniform-external-field-torque-and-its-calculation-physics-articleid-15' },
-                        ],
-                        [
-                          { label: "Maxwell's Equations", url: 'https://collegedunia.com/exams/maxwells-equations-deriving-equations-differential-form-physics-articleid-574' },
-                          { label: "Kirchhoff's Laws", url: 'https://collegedunia.com/exams/kirchhoffs-laws-kirchhoffs-current-and-voltage-laws-and-applications-physics-articleid-26' },
-                        ],
-                        [
-                          { label: 'Cells, EMF and Internal Resistance', url: 'https://collegedunia.com/exams/cells-emf-and-internal-resistance-introduction-and-equations-physics-articleid-30' },
-                          { label: 'Electrostatics', url: 'https://collegedunia.com/exams/electrostatics-coulombs-law-electric-field-electrostatic-pressure-physics-articleid-3841' },
-                        ],
-                        [
-                          { label: 'Unit of Electric Field', url: 'https://collegedunia.com/exams/electric-field-definition-formula-calculation-physics-articleid-2259' },
-                          { label: 'Electric Charges', url: 'https://collegedunia.com/exams/electric-charge-definition-formula-types-and-properties-physics-articleid-12' },
-                        ],
-                        [
-                          { label: 'Conservation of Charge', url: 'https://collegedunia.com/exams/conservation-of-charge-definition-formula-examples-articleid-3095' },
-                          { label: 'Electric Flux', url: 'https://collegedunia.com/exams/electric-flux-definition-formula-symbol-and-applications-physics-articleid-17' },
-                        ],
-                        [
-                          { label: 'Electric Field', url: 'https://collegedunia.com/exams/electric-field-definition-formula-and-electric-field-direction-physics-articleid-13' },
-                          { label: 'Electrostatic Potential and Capacitance', url: 'https://collegedunia.com/exams/electrostatic-potential-and-capacitance-introduction-and-derivation-physics-articleid-24' },
-                        ],
-                      ].map((row, ri) => (
-                        <tr key={ri} className="hover:bg-emerald-50/30 transition-colors">
-                          {row.map((cell, ci) => (
-                            <td key={ci} className="px-6 py-3">
-                              <a href={cell.url} target="_blank" rel="noopener noreferrer"
-                                className="font-bold text-emerald-700 hover:text-emerald-900 hover:underline transition-colors text-sm">
-                                {cell.label}
-                              </a>
-                            </td>
-                          ))}
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
+
+                  <p className="text-zinc-700 leading-relaxed">
+                    Electric Charges and Fields is the foundational chapter of the <strong>Electrostatics</strong> unit. A solid grasp here is non-negotiable because the concepts of electric fields, dipoles, and fluxes seamlessly transition into Capacitance, Magnetism, and Electromagnetic Induction. This chapter is your stepping stone to mastering Class 12 Physics.
+                  </p>
+
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div className="bg-blue-50 border border-blue-100 rounded-2xl p-5 space-y-2">
+                      <h3 className="font-bold text-blue-900 flex items-center gap-2">
+                        <span className="w-6 h-6 rounded-full bg-blue-200 flex items-center justify-center text-sm">⏱️</span>
+                        Time Required to Master
+                      </h3>
+                      <p className="text-sm text-blue-800 leading-relaxed">
+                        For a dedicated student, it typically takes <strong>8-10 hours</strong> of focused study. This includes: <br />
+                        • 3-4 hours reading NCERT & Notes<br />
+                        • 2 hours practicing in-text derivations<br />
+                        • 3-4 hours solving numericals & NCERT exercises
+                      </p>
+                    </div>
+
+                    <div className="bg-amber-50 border border-amber-100 rounded-2xl p-5 space-y-2">
+                      <h3 className="font-bold text-amber-900 flex items-center gap-2">
+                        <span className="w-6 h-6 rounded-full bg-amber-200 flex items-center justify-center text-sm">📅</span>
+                        Ideal Revision Strategy
+                      </h3>
+                      <p className="text-sm text-amber-800 leading-relaxed">
+                        • <strong>Day 1:</strong> Revise properties of charge & Coulomb's law.<br />
+                        • <strong>Day 3:</strong> Practice dipole & electric field derivations.<br />
+                        • <strong>Day 7:</strong> Focus purely on Gauss's Law numericals.<br />
+                        • <strong>Monthly:</strong> Retake chapter mock tests.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="bg-emerald-50 rounded-2xl p-5 border border-emerald-100 space-y-3">
+                    <h3 className="font-semibold text-emerald-900 flex items-center gap-2">
+                      <span className="w-5 h-5 rounded-full bg-emerald-200 flex items-center justify-center text-xs">💡</span>
+                      Student Pro-Tip for Derivations
+                    </h3>
+                    <p className="text-sm text-emerald-800 leading-relaxed">
+                      Many students struggle with the vector addition in Coulomb's Law and the symmetrical applications of Gauss's Law. Do not skip drawing the diagrams! A correct vector diagram for an electric dipole almost guarantees correct mathematical steps.
+                    </p>
+                  </div>
                 </section>
 
-                {/* Important Topics */}
+                {/* Exam Weightage Breakdown */}
                 <section className="bg-white rounded-[2rem] border border-zinc-200 p-8 space-y-5">
-                  <h2 className="text-xl font-bold text-zinc-900 flex items-center gap-2">
-                    <Info className="w-5 h-5 text-emerald-600" />
-                    Physics Chapter 1 NCERT: Important Topics of Electric Charges and Fields
+                  <div className="flex items-center gap-3 border-b border-zinc-100 pb-4">
+                    <div className="p-2 bg-purple-100 text-purple-600 rounded-xl">
+                      <Target className="w-6 h-6" />
+                    </div>
+                    <h2 className="text-xl font-bold tracking-tight text-zinc-900">
+                      Exam Weightage & Importance
+                    </h2>
+                  </div>
+
+                  <div className="grid md:grid-cols-3 gap-6 pt-2">
+                    <div className="space-y-2 border-l-4 border-indigo-500 pl-4 py-1">
+                      <h3 className="font-bold text-zinc-900">CBSE Boards</h3>
+                      <p className="text-sm text-zinc-600">Together with Chapter 2 (Electrostatic Potential), this unit carries <strong>16-17 marks</strong> out of 70 theory marks. Expect 1 long format derivation and 2-3 MCQs.</p>
+                    </div>
+                    <div className="space-y-2 border-l-4 border-emerald-500 pl-4 py-1">
+                      <h3 className="font-bold text-zinc-900">NEET UG</h3>
+                      <p className="text-sm text-zinc-600">Historically, <strong>2-3 questions</strong> appear purely from Electrostatics. Focus heavily on Gauss's law applications and charge distribution numericals.</p>
+                    </div>
+                    <div className="space-y-2 border-l-4 border-amber-500 pl-4 py-1">
+                      <h3 className="font-bold text-zinc-900">JEE Main / Adv</h3>
+                      <p className="text-sm text-zinc-600"><strong>1-2 questions</strong> per shift. Questions here usually combine electrostatics with mechanics (like a pendulum in an E-field). Conceptual core is highly tested.</p>
+                    </div>
+                  </div>
+                </section>
+
+                {/* Complete Resource Guide CTAs */}
+                <section className="bg-white rounded-[2rem] border border-zinc-200 p-8 space-y-6 shadow-sm">
+                  <div className="space-y-2 text-center md:text-left">
+                    <h2 className="text-2xl font-bold tracking-tight text-zinc-900 flex items-center justify-center md:justify-start gap-2">
+                      <LayoutGrid className="w-6 h-6 text-emerald-600" />
+                      Your Full Toolkit for Chapter 1
+                    </h2>
+                    <p className="text-zinc-600 text-sm max-w-2xl">
+                      Don't stop at just reading. Practice makes perfect. Use our meticulously created resources targeted purely for Electric Charges and Fields to build absolute mastery.
+                    </p>
+                  </div>
+
+                  <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-4 pt-4">
+                    <Link to="/class-12/physics/notes" className="bg-white hover:bg-zinc-50 border border-zinc-200 hover:border-blue-300 rounded-2xl p-5 hover:shadow-lg hover:-translate-y-1 transition-all group relative overflow-hidden flex flex-col justify-between">
+                      <div className="flex items-start gap-4">
+                        <div className="bg-blue-50 border border-blue-100 p-3 rounded-xl text-blue-600 transition-transform shrink-0 group-hover:scale-110">
+                          <FileText className="w-6 h-6" />
+                        </div>
+                        <div className="space-y-1">
+                          <h4 className="font-bold text-zinc-900 text-lg group-hover:text-blue-700 transition-colors">Revision Notes</h4>
+                          <p className="text-sm text-zinc-600 leading-relaxed">
+                            Short, crisp chapter notes designed for quick revision. Perfect for brushing up concepts right before your exams without reading the entire textbook.
+                          </p>
+                        </div>
+                      </div>
+                      <div className="w-full flex justify-end mt-4 pt-4 border-t border-zinc-100">
+                        <span className="inline-flex items-center gap-1 text-sm font-bold text-blue-600">
+                          View Chapter Notes <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                        </span>
+                      </div>
+                    </Link>
+
+                    <Link to="/class-12/physics/exemplar" className="bg-white hover:bg-zinc-50 border border-zinc-200 hover:border-purple-300 rounded-2xl p-5 hover:shadow-lg hover:-translate-y-1 transition-all group relative overflow-hidden flex flex-col justify-between">
+                      <div className="flex items-start gap-4">
+                        <div className="bg-purple-50 border border-purple-100 p-3 rounded-xl text-purple-600 transition-transform shrink-0 group-hover:scale-110">
+                          <BookOpen className="w-6 h-6" />
+                        </div>
+                        <div className="space-y-1">
+                          <h4 className="font-bold text-zinc-900 text-lg group-hover:text-purple-700 transition-colors">NCERT Exemplar</h4>
+                          <p className="text-sm text-zinc-600 leading-relaxed">
+                            Advanced problem sets curated by NCERT. Crucial for students targeting competitive exams like JEE and NEET to build higher-order thinking skills.
+                          </p>
+                        </div>
+                      </div>
+                      <div className="w-full flex justify-end mt-4 pt-4 border-t border-zinc-100">
+                        <span className="inline-flex items-center gap-1 text-sm font-bold text-purple-600">
+                          Practice Exemplar <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                        </span>
+                      </div>
+                    </Link>
+
+                    <Link to="/class-12/physics/formulas" className="bg-white hover:bg-zinc-50 border border-zinc-200 hover:border-emerald-300 rounded-2xl p-5 hover:shadow-lg hover:-translate-y-1 transition-all group relative overflow-hidden flex flex-col justify-between">
+                      <div className="flex items-start gap-4">
+                        <div className="bg-emerald-50 border border-emerald-100 p-3 rounded-xl text-emerald-600 transition-transform shrink-0 group-hover:scale-110">
+                          <Target className="w-6 h-6" />
+                        </div>
+                        <div className="space-y-1">
+                          <h4 className="font-bold text-zinc-900 text-lg group-hover:text-emerald-700 transition-colors">Formula Sheet</h4>
+                          <p className="text-sm text-zinc-600 leading-relaxed">
+                            A one-page cheat sheet containing all critical mathematical formulas for Electric Charges and Fields. Highly useful for numerical problem solving.
+                          </p>
+                        </div>
+                      </div>
+                      <div className="w-full flex justify-end mt-4 pt-4 border-t border-zinc-100">
+                        <span className="inline-flex items-center gap-1 text-sm font-bold text-emerald-600">
+                          Download Formulas <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                        </span>
+                      </div>
+                    </Link>
+
+                    <a href="https://collegedunia.com/exams/cbse-class-xii/physics-question-paper" target="_blank" rel="noopener noreferrer" className="bg-white hover:bg-zinc-50 border border-zinc-200 hover:border-rose-300 rounded-2xl p-5 hover:shadow-lg hover:-translate-y-1 transition-all group relative overflow-hidden flex flex-col justify-between">
+                      <div className="flex items-start gap-4">
+                        <div className="bg-rose-50 border border-rose-100 p-3 rounded-xl text-rose-600 transition-transform shrink-0 group-hover:scale-110">
+                          <HelpCircle className="w-6 h-6" />
+                        </div>
+                        <div className="space-y-1">
+                          <h4 className="font-bold text-zinc-900 text-lg group-hover:text-rose-700 transition-colors">Mock Tests & PYQs</h4>
+                          <p className="text-sm text-zinc-600 leading-relaxed">
+                            Test your preparation with rigorous mock papers and previous year questions. Identify weak points before the actual board exams.
+                          </p>
+                        </div>
+                      </div>
+                      <div className="w-full flex justify-end mt-4 pt-4 border-t border-zinc-100">
+                        <span className="inline-flex items-center gap-1 text-sm font-bold text-rose-600">
+                          Take Mock Test <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                        </span>
+                      </div>
+                    </a>
+                  </div>
+                </section>
+
+                {/* Additional Sections Guiding Students */}
+
+                {/* 1. Why NCERT Exemplar is a Game Changer */}
+                <section className="bg-purple-50/50 rounded-[2rem] border border-purple-100 p-8 space-y-4">
+                  <h2 className="text-xl font-bold text-purple-900 flex items-center gap-2">
+                    <BookOpen className="w-5 h-5 text-purple-600" />
+                    Why Solve the NCERT Exemplar?
                   </h2>
-                  <p className="text-sm text-zinc-600">Some of the important topics of Class 12 Physics Chapter 1 are:</p>
-                  <div className="space-y-4 text-sm text-zinc-600">
-                    <p>An <strong>electric charge</strong> refers to the property of subatomic particles that leads it to experience a force when they are placed in an electric and magnetic field. Electric Charges are of two types – like charges and unlike charges:</p>
-                    <ol className="space-y-1 list-decimal list-inside">
-                      <li>Like Charges repel each other.</li>
-                      <li>Unlike Charges attract each other.</li>
-                    </ol>
-                    <p>An electric charge has <strong>3 fundamental properties</strong>: quantization, additive nature, and conservation of electric charge.</p>
-                    <div className="bg-emerald-50 border border-emerald-100 rounded-2xl p-5 space-y-3">
-                      <ul className="space-y-2">
+                  <p className="text-sm text-purple-800 leading-relaxed">
+                    While the standard NCERT textbook builds your foundational concepts, the <strong>NCERT Exemplar</strong> tests the depth of your understanding. It contains high-order thinking skills (HOTS) questions designed specifically to bridge the gap between board exams and competitive exams like JEE Main and NEET.
+                  </p>
+                  <ul className="space-y-3 mt-4">
+                    <li className="flex items-start gap-3 text-sm text-purple-800">
+                      <div className="w-1.5 h-1.5 rounded-full bg-purple-500 mt-2 shrink-0" />
+                      <span><strong>Conceptual Clarity:</strong> The MCQs in the Exemplar often have confusing trap options that force you to deeply understand the underlying physics principles, rather than just rote learning.</span>
+                    </li>
+                    <li className="flex items-start gap-3 text-sm text-purple-800">
+                      <div className="w-1.5 h-1.5 rounded-full bg-purple-500 mt-2 shrink-0" />
+                      <span><strong>Board Exam Variations:</strong> CBSE frequently picks 3-mark and 5-mark long answer questions directly from Exemplar problems for the final examination.</span>
+                    </li>
+                  </ul>
+                  <div className="pt-3">
+                    <Link to="/class-12/physics/exemplar" className="inline-flex items-center gap-2 text-sm font-bold text-purple-700 hover:text-purple-900 transition-colors bg-purple-100/50 hover:bg-purple-200 px-5 py-2.5 rounded-xl">
+                      View Chapter 1 Exemplar Solutions <ChevronRight className="w-4 h-4" />
+                    </Link>
+                  </div>
+                </section>
+
+                {/* 2. Importance of Formula Sheets */}
+                <section className="bg-emerald-50/50 rounded-[2rem] border border-emerald-100 p-8 space-y-4">
+                  <h2 className="text-xl font-bold text-emerald-900 flex items-center gap-2">
+                    <Target className="w-5 h-5 text-emerald-600" />
+                    The Power of Quick Formula Revisions
+                  </h2>
+                  <p className="text-sm text-emerald-800 leading-relaxed">
+                    Electric Charges and Fields involves significant mathematics—from Coulomb's vector forms to complex Flux integrations. In the pressure of an exam, remembering the exact power of 'r' or whether you need 'ε₀' in the numerator or denominator is crucial.
+                  </p>
+                  <p className="text-sm text-emerald-800 leading-relaxed">
+                    We highly recommend maintaining a separate formula notebook. Download our curated formula sheet to get a ready-made list of all crucial equations in this chapter. Review this sheet every Sunday to commit the formulas to memory permanently.
+                  </p>
+                  <div className="pt-3">
+                    <Link to="/class-12/physics/formulas" className="inline-flex items-center gap-2 text-sm font-bold text-emerald-700 hover:text-emerald-900 transition-colors bg-emerald-100/50 hover:bg-emerald-200 px-5 py-2.5 rounded-xl">
+                      Download Chapter 1 Formula Sheet <ChevronRight className="w-4 h-4" />
+                    </Link>
+                  </div>
+                </section>
+
+                {/* Video Solutions */}
+                <section className="bg-white rounded-[2rem] border border-zinc-200 p-8 space-y-6">
+                  <div className="flex items-center gap-3 border-b border-zinc-100 pb-4">
+                    <div className="p-2 bg-red-100 text-red-600 rounded-xl">
+                      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.377.55a3.016 3.016 0 0 0-2.122 2.136C0 8.07 0 12 0 12s0 3.93.501 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.55 9.377.55 9.377.55s7.505 0 9.377-.55a3.016 3.016 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" /></svg>
+                    </div>
+                    <h2 className="text-2xl font-bold tracking-tight text-zinc-900">
+                      Video Solutions: Electric Charges and Fields
+                    </h2>
+                  </div>
+                  <p className="text-zinc-600 leading-relaxed md:text-lg">
+                    Stuck on a complex derivation or tricky numerical? Watch this comprehensive video tutorial breaking down the most challenging problems from the Chapter 1 NCERT textbook step-by-step. Let an expert teacher walk you through the logic behind Coulomb's law vectors and Gauss's theorem setups.
+                  </p>
+                  <div className="mt-8 rounded-3xl overflow-hidden border-4 border-zinc-100 shadow-md bg-zinc-900 relative" style={{ paddingTop: '56.25%' }}>
+                    {/* Placeholder iframe - 56.25% padding trick handles 16:9 aspect ratio */}
+                    <div className="absolute inset-0 flex flex-col items-center justify-center text-zinc-400 p-6 text-center z-0">
+                      <Loader2 className="w-8 h-8 animate-spin mb-4 text-zinc-600" />
+                      <p className="font-bold text-zinc-300">Loading Video Player...</p>
+                    </div>
+                    {/* Hardcoding a great CBSE class 12 physics chap 1 relevant video from youtube (e.g., Arvind Academy or similar popular one, we use a generic embed for now) */}
+                    <iframe
+                      className="absolute top-0 left-0 w-full h-full z-10"
+                      src="https://www.youtube.com/embed/QXldH_EGu8Q"
+                      title="YouTube video player"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    ></iframe>
+                  </div>
+                </section>
+
+                {/* Study Materials & Related Articles Table */}
+                <section className="bg-white rounded-[2rem] border border-zinc-200 overflow-hidden">
+                  <div className="p-8 pb-4 border-b border-zinc-100">
+                    <h2 className="text-xl font-bold tracking-tight text-zinc-900 flex items-center gap-2">
+                      <LayoutGrid className="w-5 h-5 text-emerald-600" />
+                      Explore Related Topics & Study Materials
+                    </h2>
+                    <p className="text-sm text-zinc-500 mt-2">
+                      Deep-dive into specific derivations and concepts from Electric Charges and Fields.
+                    </p>
+                  </div>
+
+                  <div className="grid md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-zinc-100">
+                    <div className="p-6 space-y-4">
+                      <h3 className="font-bold text-zinc-800 text-sm uppercase tracking-wider">Concept Deep Dives</h3>
+                      <ul className="space-y-3">
                         {[
-                          <span key={0}><strong>Quantization</strong> – The total charge of a body denotes the integral multiple of a basic quantum of charge.</span>,
-                          <span key={1}><strong>Additive</strong> – This property represents the total charge of a body as an algebraic sum of all the singular charges that act on the system.</span>,
-                          <span key={2}><strong>Conservation</strong> – This property expresses that the total charge of a system is not affected with time. Charges can neither be created nor destroyed.</span>,
-                        ].map((item, i) => (
-                          <li key={i} className="flex items-start gap-3 text-sm text-emerald-800">
-                            <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 shrink-0" />
-                            <span>{item}</span>
+                          { label: 'Charging by Induction', url: 'https://collegedunia.com/exams/charging-by-induction-definition-charged-objects-and-sample-questions-physics-articleid-869' },
+                          { label: 'Dipole in a Uniform External Field', url: 'https://collegedunia.com/exams/dipole-in-a-uniform-external-field-torque-and-its-calculation-physics-articleid-15' },
+                          { label: 'Unit of Electric Field', url: 'https://collegedunia.com/exams/electric-field-definition-formula-calculation-physics-articleid-2259' },
+                          { label: 'Conservation of Charge', url: 'https://collegedunia.com/exams/conservation-of-charge-definition-formula-examples-articleid-3095' },
+                        ].map((link, idx) => (
+                          <li key={idx}>
+                            <a href={link.url} target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-emerald-700 hover:text-emerald-900 hover:underline flex items-center gap-2">
+                              <ChevronRight className="w-3 h-3 text-emerald-400" />
+                              {link.label}
+                            </a>
                           </li>
                         ))}
                       </ul>
                     </div>
-                    <ul className="space-y-2">
-                      {[
-                        <span key={0}><a href="https://collegedunia.com/exams/class-12-physics-chapter-1-coulomb-s-law-articleid-11" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:underline font-semibold">Coulomb's law</a> states that the mutual electrostatic force that exists between two point charges A and B is directly proportional to their product, AB and inversely proportional to the square of the distance between them.</span>,
-                        'Electric flux is the total number of electric field lines that pass through a given area in a unit of time.',
-                        'The electric flux Δθ through an area element of ΔS can be denoted by Δθ = E · ΔS cosθ.',
-                        'Conductors are the objects that assist in the movement of electric charge. Examples of Conductors – Human bodies, Earth, metal, etc.',
-                        'Insulators offer resistance to the flow of electricity through them. Examples of Insulators – Nylon, Wood, Porcelain, etc.',
-                        <span key={4}><strong>Gauss's law</strong> states that the total amount of <a href="https://collegedunia.com/exams/electric-flux-definition-formula-symbol-and-applications-physics-articleid-17" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:underline">electric flux</a> that passes through a closed surface is directly proportional to the enclosed electric charge. The Gauss law formula is expressed by: <strong className="font-mono">Φ = q/ε₀</strong></span>,
-                      ].map((item, i) => (
-                        <li key={i} className="flex items-start gap-3 text-sm text-zinc-600">
-                          <div className="w-1.5 h-1.5 rounded-full bg-emerald-400 mt-2 shrink-0" />
-                          <span>{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </section>
 
-                {/* Check-Out Resources */}
-                <section className="bg-white rounded-[2rem] border border-zinc-200 overflow-hidden">
-                  <div className="p-8 pb-4">
-                    <h2 className="text-xl font-bold text-zinc-900">Check-Out More Resources</h2>
-                  </div>
-                  <table className="w-full text-sm border-t border-zinc-100">
-                    <tbody className="divide-y divide-zinc-100">
-                      {[
-                        [
-                          { label: 'NCERT Solutions for Class 12 Physics', url: 'https://collegedunia.com/exams/ncert-chapterwise-solutions-for-class-12-physics-articleid-4091' },
-                          { label: 'Class 12 Physics Notes', url: 'https://collegedunia.com/exams/cbse-class-xii/physics' },
+                    <div className="p-6 space-y-4">
+                      <h3 className="font-bold text-zinc-800 text-sm uppercase tracking-wider">Broader Physics Topics</h3>
+                      <ul className="space-y-3">
+                        {[
+                          { label: "Applications of Gauss's Law", url: 'https://collegedunia.com/exams/applications-of-gausss-law-overview-formula-and-derivations-physics-articleid-10' },
+                          { label: 'Electrostatic Potential and Capacitance', url: 'https://collegedunia.com/exams/electrostatic-potential-and-capacitance-introduction-and-derivation-physics-articleid-24' },
                           { label: 'Formulas in Physics', url: 'https://collegedunia.com/exams/physics-formulas-notes-and-examples-articleid-4112' },
-                        ],
-                        [
-                          { label: 'Topics for Comparison in Physics', url: 'https://collegedunia.com/exams/difference-between-in-physics-articleid-4821' },
-                          { label: 'Choice-based questions in Physics', url: 'https://collegedunia.com/exams/physics-mcqs-answers-with-explanations-articleid-6330' },
-                          { label: 'Topics in relation to Physics', url: 'https://collegedunia.com/exams/relation-between-articles-physics-articleid-4832' },
-                        ],
-                        [
-                          { label: 'Physics Study Notes', url: 'https://collegedunia.com/exams/physics-laws-formulas-derivations-study-guides-notes-articleid-4565' },
-                          { label: 'Class 12 Physics Book PDF', url: 'https://collegedunia.com/exams/ncert-class-12-physics-book-pdf-articleid-6458' },
-                          { label: 'Class 12 Physics Practicals', url: 'https://collegedunia.com/exams/cbse-class-xii/physics-practical' },
-                        ],
-                      ].map((row, ri) => (
-                        <tr key={ri} className="hover:bg-zinc-50/50 transition-colors">
-                          {row.map((cell, ci) => (
-                            <td key={ci} className="px-6 py-3">
-                              <a href={cell.url} target="_blank" rel="noopener noreferrer"
-                                className="font-bold text-emerald-700 hover:text-emerald-900 hover:underline transition-colors text-sm">
-                                {cell.label}
-                              </a>
-                            </td>
-                          ))}
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
+                          { label: 'Class 12 Physics Practicals Guide', url: 'https://collegedunia.com/exams/cbse-class-xii/physics-practical' },
+                        ].map((link, idx) => (
+                          <li key={idx}>
+                            <a href={link.url} target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-blue-700 hover:text-blue-900 hover:underline flex items-center gap-2">
+                              <ChevronRight className="w-3 h-3 text-blue-400" />
+                              {link.label}
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
                 </section>
-
               </div>
             )}
+
+            {/* End of Chapter 1 content */}
           </div>
 
           <RelatedSidebar

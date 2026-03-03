@@ -103,7 +103,7 @@ export default function SubjectHub() {
               <section className="space-y-6">
                 <div className="space-y-2">
                   <span className="text-emerald-600 font-semibold text-sm uppercase tracking-wider">{formattedClass} {formattedSubject}</span>
-                  <h2 className="text-4xl md:text-5xl font-serif font-bold text-zinc-900 leading-tight">
+                  <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-zinc-900 leading-tight">
                     Select <span className="text-emerald-600">Resource Type</span>
                   </h2>
                 </div>
@@ -666,7 +666,7 @@ export default function SubjectHub() {
               <section className="space-y-6">
                 <div className="space-y-2">
                   <span className="text-emerald-600 font-semibold text-sm uppercase tracking-wider">{formattedClass} {formattedSubject}</span>
-                  <h2 className="text-4xl md:text-5xl font-serif font-bold text-zinc-900 leading-tight">
+                  <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-zinc-900 leading-tight">
                     {resourceOptions.find(r => r.slug === selectedResourceType)?.name}
                   </h2>
                 </div>
@@ -1820,7 +1820,10 @@ export default function SubjectHub() {
                         </div>
                         <table className="w-full text-sm border-t border-zinc-100">
                           <thead className="bg-zinc-50 text-zinc-500 font-bold uppercase tracking-wider text-xs">
-                            <tr><th className="px-6 py-4">Subject</th><th className="px-6 py-4 text-right">PDF</th></tr>
+                            <tr>
+                              <th className="pl-12 pr-60 py-4">Subject</th>
+                              <th className="px-6 py-4 text-right">PDF</th>
+                            </tr>
                           </thead>
                           <tbody className="divide-y divide-zinc-100">
                             {[
@@ -2187,9 +2190,16 @@ export default function SubjectHub() {
                               </li>
                             ))}
                           </ul>
-                          <button className="w-full py-3 bg-zinc-50 border border-zinc-200 rounded-2xl text-zinc-700 font-bold text-sm hover:bg-zinc-100 transition-colors mt-auto">
-                            Class 12th Physics Mock Tests →
-                          </button>
+                          <a
+                            href="https://collegedunia.com/exam/cbse-class-12-physics-mock-test"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="w-full mt-auto block"
+                          >
+                            <button className="w-full py-3 bg-amber-50 border border-amber-200 rounded-2xl text-amber-700 font-bold text-sm hover:bg-amber-100 transition-colors">
+                              Class 12th Physics Mock Tests →
+                            </button>
+                          </a>
                         </section>
                       </div>
 
@@ -2200,7 +2210,7 @@ export default function SubjectHub() {
                     <section className="bg-white rounded-[2.5rem] border border-zinc-200 p-8 md:p-12 space-y-12 overflow-hidden relative">
                       <div className="relative z-10 space-y-10">
                         <div className="space-y-4">
-                          <h2 className="text-3xl font-serif font-bold text-zinc-900">
+                          <h2 className="text-3xl font-bold tracking-tight text-zinc-900">
                             Mastering {formattedClass} {formattedSubject}: Complete Study Guide
                           </h2>
                           <p className="text-zinc-600 leading-relaxed">
@@ -2211,7 +2221,7 @@ export default function SubjectHub() {
                         {/* Physics Notes Intro - only for Class 12 Physics Notes */}
                         {classLevel === 'class-12' && subjectSlug === 'physics' && selectedResourceType === 'notes' && (
                           <div className="space-y-5 pb-2">
-                            <h2 className="text-2xl font-serif font-bold text-zinc-900">
+                            <h2 className="text-2xl font-bold tracking-tight text-zinc-900">
                               CBSE Class 12 Physics Notes: Chapter Wise Notes and Solutions
                             </h2>
                             <p className="text-zinc-600 leading-relaxed text-sm">

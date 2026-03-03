@@ -1,6 +1,7 @@
 export interface StudyGuideItem {
   topic: string;
   content: string;
+  url?: string;   // optional deep-link for the topic name
 }
 
 export interface QuestionSolution {
@@ -30,6 +31,12 @@ export interface Chapter {
   bookParts?: BookPart[];        // Named parts for book PDF viewer
   studyGuide: StudyGuideItem[];
   solutions: QuestionSolution[];
+  resourceOverrides?: {
+    [resourceType: string]: {
+      title?: string;
+      description?: string;
+    }
+  };
 }
 
 export const chapters: Chapter[] = [
@@ -38,12 +45,30 @@ export const chapters: Chapter[] = [
     title: "Chapter 1: Electric Charges and Fields",
     shortTitle: "Electric Charges & Fields",
     description: "Introduces the fundamental concepts of electric charge, Coulomb's law, electric field lines, and Gauss's law with applications.",
-    pdfUrl: "https://ncert.nic.in/textbook/pdf/leph101.pdf",
-    notesUrl: "https://ncert.nic.in/textbook/pdf/leph101.pdf",
-    exemplarUrl: "https://ncert.nic.in/textbook/pdf/keep101.pdf",
-    exemplarHindiUrl: "https://ncert.nic.in/textbook/pdf/khep101.pdf",
+    pdfUrl: "https://image-static.collegedunia.com/public/image/NCERT_Class_12_Physics_Chapter_1_Solutions_1dfefc3656f376a64934a5f25ec8dac1.pdf",
+    notesUrl: "https://image-static.collegedunia.com/public/image/NCERT_Class_12_Physics_Chapter_1_Notes_93e2e99b3079cf43fd24c4cf6fbd4786.pdf",
+    exemplarUrl: "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/physics/leep101.pdf",
+    exemplarHindiUrl: "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/physics(hindi)/lhep101.pdf",
     formulaSheetUrl: "https://www.collegedunia.com/school-education/cbse-class-12-physics-formulas",
     keyFormulas: ["F = kq₁q₂/r² (Coulomb's Law)", "E = F/q₀ (Electric Field)", "Φ = q_enc/ε₀ (Gauss's Law)", "p = q·d (Dipole Moment)"],
+    resourceOverrides: {
+      solutions: {
+        title: "Class 12 Physics NCERT Solutions: Electric Charges and Fields",
+        description: "Get detailed, step-by-step NCERT solutions for Class 12 Physics Chapter 1. Master Coulomb's Law, Electric Fields, and Gauss's Theorem with our expert answers."
+      },
+      notes: {
+        title: "Class 12 Physics Chapter 1 Notes: Rapid Revision",
+        description: "Download comprehensive short notes for Class 12 Physics Chapter 1. Perfect for quick revision of Electric Charges and Fields before your board exams."
+      },
+      books: {
+        title: "NCERT Book for Class 12 Physics Chapter 1 PDF",
+        description: "Read or download the official NCERT Class 12 Physics Chapter 1 Book PDF. Study offline and prepare effectively for CBSE board exams."
+      },
+      exemplar: {
+        title: "NCERT Exemplar Solutions for Class 12 Physics Chapter 1",
+        description: "Access advanced NCERT Exemplar problems and detailed solutions for Electric Charges and Fields to boost your conceptual core and competitive exam readiness."
+      }
+    },
     bookParts: [
       { label: "Chapter 1 PDF", url: "https://ncert.nic.in/textbook/pdf/leph101.pdf" },
       { label: "Part 1 Full Book", url: "https://ncert.nic.in/textbook/pdf/leph1dd.pdf" },
@@ -51,19 +76,23 @@ export const chapters: Chapter[] = [
     studyGuide: [
       {
         topic: "Electric Charge",
-        content: "Charge is a fundamental property of matter. There are two types: positive and negative. Like charges repel, unlike charges attract. Charge is quantized: q = ne, where n is an integer."
+        content: "Charge is a fundamental property of matter. There are two types: positive and negative. Like charges repel, unlike charges attract. Charge is quantized: q = ne, where n is an integer.",
+        url: "https://collegedunia.com/exams/electric-charges-and-fields-properties-flux-dipole-and-coulombs-law-physics-articleid-8"
       },
       {
         topic: "Coulomb's Law",
-        content: "The force between two point charges is F = kq₁q₂/r², where k = 9 × 10⁹ N m² C⁻². The force is along the line joining the charges."
+        content: "The force between two point charges is F = kq₁q₂/r², where k = 9 × 10⁹ N m² C⁻². The force is along the line joining the charges.",
+        url: "https://collegedunia.com/exams/coulombs-law-physics-articleid-11"
       },
       {
         topic: "Electric Field",
-        content: "E = F/q₀. Electric field lines originate from positive charges and terminate at negative charges. Field lines never cross each other."
+        content: "E = F/q₀. Electric field lines originate from positive charges and terminate at negative charges. Field lines never cross each other.",
+        url: "https://collegedunia.com/exams/electric-field-definition-formula-and-examples-physics-articleid-10"
       },
       {
         topic: "Gauss's Law",
-        content: "The total electric flux through a closed surface is Φ = q_enc/ε₀. Useful for finding E when charge distribution has high symmetry."
+        content: "The total electric flux through a closed surface is Φ = q_enc/ε₀. Useful for finding E when charge distribution has high symmetry.",
+        url: "https://collegedunia.com/exams/electric-charges-and-fields-properties-flux-dipole-and-coulombs-law-physics-articleid-8"
       }
     ],
     solutions: [
