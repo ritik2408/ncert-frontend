@@ -27,7 +27,10 @@ import { exemplarContent } from '../data/exemplarContent';
 import { Document, Page, pdfjs } from 'react-pdf';
 import HTMLFlipBook from 'react-pageflip';
 
-pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
+pdfjs.GlobalWorkerOptions.workerSrc = new URL(
+    'pdfjs-dist/build/pdf.worker.min.mjs',
+    import.meta.url
+).toString();
 
 import RelatedSidebar from '../components/RelatedSidebar';
 import CollegeDuniaLogo from '../components/CollegeDuniaLogo';
