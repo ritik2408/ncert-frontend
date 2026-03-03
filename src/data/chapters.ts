@@ -76,7 +76,7 @@ export const chapters: Chapter[] = [
     studyGuide: [
       {
         topic: "Electric Charge",
-        content: "Charge is a fundamental property of matter. There are two types: positive and negative. Like charges repel, unlike charges attract. Charge is quantized: q = ne, where n is an integer.",
+        content: "Charge is a fundamental property of matter. There are two types: positive and negative. Like charges repel, unlike charges attract. Charge is quantized: q = ne, where n is an integer",
         url: "https://collegedunia.com/exams/electric-charges-and-fields-properties-flux-dipole-and-coulombs-law-physics-articleid-8"
       },
       {
